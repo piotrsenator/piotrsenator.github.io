@@ -1,0 +1,14 @@
+# Jekyll configuration
+collections:
+  cities:
+    output: true
+  luxembourg_food:
+    output: true
+  luxembourg_walks:
+    output: true
+  luxembourg_arts:
+    output: true
+  luxembourg_excursions:
+    output: true
+  trail_items:
+    output: true
