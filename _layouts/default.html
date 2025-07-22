@@ -1,1 +1,13 @@
-<html><body>{{ content }}</body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <main class="content" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
