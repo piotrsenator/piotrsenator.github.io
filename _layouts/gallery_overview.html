@@ -1,1 +1,11 @@
-<div class="gallery-overview">{{ content }}</div>
+---
+layout: default
+---
+
+<h1>Off the Trail</h1>
+
+<div class="trail-grid">
+  {% for item in site.trail_items %}
+    {% include gallery_item.html item=item %}
+  {% endfor %}
+</div>
