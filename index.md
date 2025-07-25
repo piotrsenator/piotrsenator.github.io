@@ -1,33 +1,57 @@
 ---
-layout: home
+layout: default
 title: Piotr Senator
 ---
-<section class="home-about-and-cities">
-  <section class="home-about">
-    <h2>About Me</h2>
-    <p>Strateg, audytor i obserwator systemów. Łączę wiedzę z różnych dziedzin i miast, by lepiej rozumieć świat.  
-    <a href="/about">→ Zobacz więcej</a></p>
+
+<main class="home-wrapper">
+
+  <section class="home-about-and-cities">
+    <section class="home-about">
+      <h2>About Me</h2>
+      <p>Strategist, auditor and observer of systems. I draw on diverse disciplines and cities to better understand the world.</p>
+      <p><a class="button subtle" href="/about/">Read more</a></p>
+    </section>
+
+    <section class="home-cities">
+      <h2>My Cities</h2>
+      <div class="city-tiles">
+        <a href="/cities/vienna/"><img src="/assets/images/city__vienna__1.jpg" alt="Vienna" /><span>Vienna</span></a>
+        <a href="/cities/warsaw/"><img src="/assets/images/city__warsaw__1.jpg" alt="Warsaw" /><span>Warsaw</span></a>
+        <a href="/cities/luxembourg/"><img src="/assets/images/city__luxembourg__1.jpg" alt="Luxembourg" /><span>Luxembourg</span></a>
+      </div>
+    </section>
   </section>
 
-  <section class="home-cities">
-    <h2>My Cities</h2>
-    <div class="city-tiles">
-      <a href="/cities/vienna/"><img src="/assets/images/city__vienna__1.jpg" alt="Vienna" /><span>Vienna</span></a>
-      <a href="/cities/warsaw/"><img src="/assets/images/city__warsaw__1.jpg" alt="Warsaw" /><span>Warsaw</span></a>
-      <a href="/cities/luxembourg/"><img src="/assets/images/city__luxembourg__1.jpg" alt="Luxembourg" /><span>Luxembourg</span></a>
+  <section class="home-trail">
+    <h2>Off the Trail</h2>
+    <div class="trip-gallery">
+      {% assign latest_trips = site.trips | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for trip in latest_trips %}
+        <a class="trip-card" href="{{ trip.url }}">
+          <img src="{{ trip.image | default: '/assets/images/placeholder.jpg' }}" alt="{{ trip.title }}">
+          <div class="trip-caption">{{ trip.title }}</div>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="button-center">
+      <a class="button subtle" href="/off-the-trail/">View all excursions</a>
     </div>
   </section>
-</section>
 
+  <section class="home-notes">
+    <h2>Notes</h2>
+    <div class="note-previews-grid">
+      {% assign latest_notes = site.notes | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for note in latest_notes %}
+        <article class="note-card">
+          <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
+          <p>{{ note.excerpt | strip_html | truncate: 160 }}</p>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="button-center">
+      <a class="button subtle" href="/notes/">View all notes</a>
+    </div>
+  </section>
 
-<section class="home-trail">
-  <h2>Off the Trail</h2>
-  {% include trip-gallery.html %}
-  <p style="text-align: center;"><a class="button" href="/off-the-trail/">Wszystkie wycieczki</a></p>
-</section>
-
-<section class="home-notes">
-  <h2>Notes</h2>
-  {% include note-preview.html %}
-  <p style="text-align: center;"><a class="button" href="/notes/">Wszystkie notatki</a></p>
-</section>
+</main>
