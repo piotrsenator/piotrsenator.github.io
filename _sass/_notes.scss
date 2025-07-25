@@ -1,41 +1,43 @@
 .note-previews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
 .note-card {
   background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none; /* brak border-radius i border: czysto */
 }
 
 .note-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .note-card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
 }
 
 .note-card h3 a {
   color: #1a1a1a;
   text-decoration: none;
-  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
 .note-card h3 a:hover {
-  color: #444;
+  border-bottom: 1px solid #1a1a1a;
 }
 
 .note-card p {
-  color: #555;
+  color: #444;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
@@ -43,6 +45,6 @@
 
 @media (max-width: 767px) {
   .note-previews-grid {
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 }
