@@ -1,3 +1,20 @@
+---
+---
+// Ten plik jest głównym punktem wejścia dla Twoich stylów Sass (SCSS).
+// Jekyll przetwarza ten plik i wszystkie importowane przez niego partiale
+// do jednego, skompilowanego pliku CSS (zazwyczaj main.css w katalogu _site/assets/css/).
+
+// Pamiętaj: Wszelkie definicje CSS i reguły stylów powinny znajdować się
+// w odpowiednich partialach (plikach zaczynających się od `_` w folderze `_sass/`).
+// Ten plik `main.scss` powinien zawierać głównie dyrektywy `@import`.
+
+// WAŻNE: Puste front matter `--- ---` na początku jest wymagane przez Jekylla,
+// aby poprawnie przetworzył ten plik jako plik Sass.
+
+// 1. GLOBALNE USTAWIANIA I STYLE PODSTAWOWE
+// Plik _base.scss zawiera definicje fontów (@font-face),
+// zmienne CSS (custom properties w :root), globalny reset stylów
+// oraz podstawowe style dla elementów HTML takich jak body, nagłówki, akapity, linki.
 @import "fonts";
 //@import "base";
 //@import "layout";
