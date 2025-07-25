@@ -15,11 +15,11 @@
 // Plik _base.scss zawiera definicje fontów (@font-face),
 // zmienne CSS (custom properties w :root), globalny reset stylów
 // oraz podstawowe style dla elementów HTML takich jak body, nagłówki, akapity, linki.
-@import "fonts";
-//@import "base";
-//@import "layout";
-//@import "components";
-//@import "cities";
-//@import "trail";
-//@import "notes";
-//@import "footer";
+@import 'fonts';
+@import 'base';
+@import 'layout';
+@import 'components';
+@import 'cities';
+@import 'trail';
+@import 'notes';
+@import 'footer';
