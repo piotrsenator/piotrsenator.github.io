@@ -19,3 +19,28 @@
 .home-about a:hover {
   text-decoration: underline;
 }
+.home-about-and-cities {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.home-about {
+  flex: 1 1 33.33%;
+  max-width: 33.33%;
+}
+
+.home-cities {
+  flex: 1 1 66.66%;
+  max-width: 66.66%;
+}
+
+@media (max-width: 767px) {
+  .home-about-and-cities {
+    flex-direction: column;
+  }
+  .home-about,
+  .home-cities {
+    max-width: 100%;
+  }
+}
