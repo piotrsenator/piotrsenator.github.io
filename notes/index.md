@@ -1,13 +1,13 @@
 ---
 layout: default
-title: My Cities
-permalink: /my-cities/
+title: Notes
+permalink: /notes/
 ---
 
-<h2>My Cities</h2>
+<h2>Notes</h2>
 
-<div class="city-tiles">
-  <a href="/cities/vienna/"><img src="/assets/images/city__vienna__1.jpg" alt="Vienna"><span>Vienna</span></a>
-  <a href="/cities/warsaw/"><img src="/assets/images/city__warsaw__1.jpg" alt="Warsaw"><span>Warsaw</span></a>
-  <a href="/cities/luxembourg/"><img src="/assets/images/city__luxembourg__1.jpg" alt="Luxembourg"><span>Luxembourg</span></a>
-</div>
+<ul class="note-list">
+  {% for note in site.notes %}
+    <li><a href="{{ note.url }}">{{ note.title }}</a> <span class="date">{{ note.date | date: "%Y-%m-%d" }}</span></li>
+  {% endfor %}
+</ul>
