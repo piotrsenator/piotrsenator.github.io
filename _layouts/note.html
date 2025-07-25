@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="note">
+  <h1>{{ page.title }}</h1>
+  <p class="note-meta">{{ page.date | date: "%d %B %Y" }}</p>
+
+  {{ content }}
+
+  {% if page.tags %}
+    <div class="tags">
+      <strong>Tags:</strong>
+      {% for tag in page.tags %}
+        <span>{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <p><a href="/notes/">← Wszystkie notatki</a></p>
+</article>
