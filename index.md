@@ -2,11 +2,6 @@
 layout: home
 title: Piotr Senator
 ---
-
-<div class="intro">
-  <h1>Piotr Senator</h1>
-</div>
-
 <section class="home-about-and-cities">
   <section class="home-about">
     <h2>About Me</h2>
