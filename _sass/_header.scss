@@ -2,14 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 1rem 1rem 1rem;
   border-bottom: 1px solid #eee;
   margin-bottom: 2rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
   background-color: #1F3D2D; /* ciemne tło zgodne z headerem */
 }
 
@@ -26,13 +24,13 @@
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   text-decoration: none;
-  color: white;
+  color: #d4e8d4; /* jasnozielony domyślny kolor */
   transition: color 0.3s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
-  color: #a3c9a8; /* jaśniejszy zielony dla hover/focus */
+  color: #a3c9a8; /* ciemniejszy zielony na hover/focus */
   outline: none;
 }
 
@@ -48,6 +46,6 @@
   .main-nav a {
     margin-left: 0;
     margin-right: 1rem;
-    color: #a3c9a8; /* lekko jaśniejszy zielony na mobile */
+    color: #d4e8d4; /* domyślny jasnozielony także na mobile */
   }
 }
