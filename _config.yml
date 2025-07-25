@@ -1,14 +1,71 @@
-# Jekyll configuration
+title: "Piotr Senator"
+email: ""
+description: "Personal website of Piotr Senator"
+baseurl: "" # jeśli używasz domeny głównej, zostaw puste
+url: "https://senator.lu" # podmień na własny URL
+
+markdown: kramdown
+theme: null
+
+# Kolekcje
 collections:
+  notes:
+    output: true
+    permalink: /notes/:slug/
+  city_notes:
+    output: true
+    permalink: /city-notes/:slug/
+  trips:
+    output: true
+    permalink: /off-the-trail/:slug/
   cities:
     output: true
-  luxembourg_food:
-    output: true
-  luxembourg_walks:
-    output: true
-  luxembourg_arts:
-    output: true
-  luxembourg_excursions:
-    output: true
-  trail_items:
-    output: true
+    permalink: /cities/:slug/
+
+# Domyślne layouty dla kolekcji
+defaults:
+  -
+    scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
+  -
+    scope:
+      path: ""
+      type: "city_notes"
+    values:
+      layout: "city_note"
+  -
+    scope:
+      path: ""
+      type: "trips"
+    values:
+      layout: "trip"
+  -
+    scope:
+      path: ""
+      type: "cities"
+    values:
+      layout: "city"
+
+# Wtyczki (możesz dodać paginate itp.)
+plugins: []
+
+# Ustawienia Build
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+
+# Konfiguracja typografii i formatowania
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Ustawienia permalinks i URL
+permalink: pretty
+
+# Ustawienia SCSS
+sass:
+  style: compressed
