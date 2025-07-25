@@ -1,0 +1,9 @@
+<div class="trip-gallery">
+  {% assign recent_trips = site.trips | sort: 'date' | reverse | slice: 0, 3 %}
+  {% for trip in recent_trips %}
+    <a class="trip-card" href="{{ trip.url }}">
+      <img src="/assets/images/trip__{{ trip.slug }}__1.jpg" alt="{{ trip.title }}">
+      <div class="trip-caption">{{ trip.title }}</div>
+    </a>
+  {% endfor %}
+</div>
