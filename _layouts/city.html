@@ -4,44 +4,5 @@ layout: default
 
 <article class="city-page">
   <h1>{{ page.title }}</h1>
-
-  <section>
-    <h2>Food & Drink</h2>
-    <ul>
-      {% assign items = site.luxembourg_food | where: "city", page.slug %}
-      {% for item in items %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h2>Walks & Views</h2>
-    <ul>
-      {% assign items = site.luxembourg_walks | where: "city", page.slug %}
-      {% for item in items %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h2>Arts & Heritage</h2>
-    <ul>
-      {% assign items = site.luxembourg_arts | where: "city", page.slug %}
-      {% for item in items %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h2>Outings & Excursions</h2>
-    <ul>
-      {% assign items = site.luxembourg_excursions | where: "city", page.slug %}
-      {% for item in items %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
+  {{ content }}
 </article>
