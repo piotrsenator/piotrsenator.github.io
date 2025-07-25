@@ -2,17 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>{{ page.title }} | Piotr Senator</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Piotr Senator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Główna strona CSS -->
   <link rel="stylesheet" href="/assets/css/main.css" />
-  <link rel="preload" href="/assets/fonts/Syne-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-  <link rel="preload" href="/assets/fonts/IBM-Plex-Sans-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-  <link rel="preload" href="/assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+  <!-- Fonty preload -->
+  <link rel="preload" href="/assets/fonts/syne-v23-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="/assets/fonts/ibm-plex-sans-v22-latin_latin-ext-600.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="/assets/fonts/inter-v19-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 </head>
 <body>
   <main>
     {{ content }}
   </main>
+
   {% include footer.html %}
 </body>
 </html>
