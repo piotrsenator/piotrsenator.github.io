@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>{% if page.title %}{{ page.title }} | {% endif %}Piotr Senator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <!-- Główna strona CSS -->
   <link rel="stylesheet" href="/assets/css/main.css" />
 
@@ -14,10 +14,14 @@
   <link rel="preload" href="/assets/fonts/inter-v19-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 </head>
 <body>
+
+  {% include header.html %}
+
   <main>
     {{ content }}
   </main>
 
   {% include footer.html %}
+
 </body>
 </html>
