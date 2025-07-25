@@ -66,6 +66,7 @@ kramdown:
 # Ustawienia permalinks i URL
 permalink: pretty
 
-# Ustawienia SCSS
+# Ustawienia SASS/SCSS
 sass:
-  style: compressed
+  sass_dir: _sass
+  style: compressed # Kompresja CSS dla optymalizacji
