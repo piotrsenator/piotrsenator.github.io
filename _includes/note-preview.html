@@ -1,12 +1,9 @@
-<div class="note-previews">
-  {% assign recent_notes = site.notes | sort: 'date' | reverse | slice: 0, 2 %}
-  {% for note in recent_notes %}
-    <article class="note-preview">
+<div class="note-previews-grid">
+  {% assign latest_notes = site.notes | sort: 'date' | reverse | slice: 0, 3 %}
+  {% for note in latest_notes %}
+    <article class="note-card">
       <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
-      {% if note.excerpt %}
-        <p>{{ note.excerpt }}</p>
-      {% endif %}
-      <p class="note-date">{{ note.date | date: "%Y-%m-%d" }}</p>
+      <p>{{ note.excerpt | strip_html | truncate: 160 }}</p>
     </article>
   {% endfor %}
 </div>
