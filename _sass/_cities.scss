@@ -1,18 +1,26 @@
+.home-cities {
+  flex: 1 1 66.66%;
+  max-width: 66.66%;
+}
+
+/* Grid dostosowany do kafelków max 150px */
 .city-tiles {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
 }
 
 .city-tiles a {
-  display: block;
+  max-width: 150px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
   border: 1px solid #ccc;
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease;
+  margin: 0 auto; /* wyśrodkowanie gdy jest mniej kafelków */
 }
 
 .city-tiles a:hover {
@@ -36,7 +44,15 @@
 }
 
 @media (max-width: 767px) {
+  .home-about-and-cities {
+    flex-direction: column;
+  }
+  .home-about,
+  .home-cities {
+    max-width: 100%;
+  }
   .city-tiles {
     grid-template-columns: 1fr;
   }
 }
+
