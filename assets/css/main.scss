@@ -1,7 +1,4 @@
----
----
-
-/* === Fonty lokalne === */
+/* === FONT FACE === */
 @font-face {
   font-family: "Syne";
   src: url("/assets/fonts/syne-v23-latin_latin-ext-700.woff2") format("woff2");
@@ -23,11 +20,15 @@
   font-style: normal;
 }
 
-/* === Reset i bazowe style === */
+/* === GLOBAL RESET === */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -41,6 +42,7 @@ body {
   margin: 0 auto;
 }
 
+/* === TYPOGRAPHY === */
 h1 {
   font-family: "Syne", sans-serif;
   font-weight: 700;
@@ -55,127 +57,133 @@ h2, h3, h4 {
   margin-bottom: 0.5rem;
 }
 
+/* === STRUCTURE === */
 section {
   margin-bottom: 3rem;
 }
 
-/* === Layout sekcji About i Cities (desktop) === */
-@media (min-width: 768px) {
-  .intro-grid {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .about {
-    flex: 1;
-    max-width: 33%;
-  }
-
-  .cities {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
+/* === ABOUT / INTRO === */
+.intro {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-/* === Kafelki miast === */
-.city-tile {
+.home-about p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.home-about a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.home-about a:hover {
+  text-decoration: underline;
+}
+
+/* === MY CITIES === */
+.city-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.city-tiles a {
+  display: block;
   position: relative;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  background-color: #eee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: inherit;
   transition: transform 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.02);
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    font-weight: 600;
-  }
 }
 
-/* === Galeria Off the Trail === */
-.gallery {
+.city-tiles a:hover {
+  transform: scale(1.02);
+}
+
+.city-tiles img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.city-tiles span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+/* === TRIP GALLERY === */
+.trip-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
 }
 
-.gallery-item {
+.trip-card {
   width: calc(33.333% - 1rem);
   aspect-ratio: 4 / 3;
   border: 1px solid #ccc;
-  padding: 0.25rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
   transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.03);
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .caption {
-    text-align: center;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-  }
+  position: relative;
 }
 
-/* === Responsywność === */
-@media (max-width: 767px) {
-  .gallery-item {
-    width: 100%;
-  }
-
-  .cities {
-    grid-template-columns: 1fr;
-  }
-
-  .intro-grid {
-    flex-direction: column;
-  }
-
-  .about, .cities {
-    max-width: 100%;
-  }
+.trip-card:hover {
+  transform: scale(1.03);
 }
 
-/* === Notes preview === */
-.note-preview {
-  margin-bottom: 2rem;
-
-  h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-    color: #444;
-  }
+.trip-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* === Przyciski === */
+.trip-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+/* === NOTES === */
+.note-previews {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.note-preview h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-preview p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.note-date {
+  font-size: 0.875rem;
+  color: #777;
+}
+
+/* === BUTTONS === */
 .button-center {
   display: flex;
   justify-content: center;
@@ -193,28 +201,47 @@ section {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #444;
-  }
 }
 
-/* === Stopka === */
-footer {
+.button:hover {
+  background-color: #444;
+}
+
+/* === FOOTER === */
+footer.site-footer {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 1px solid #ddd;
   font-size: 0.9rem;
   text-align: center;
   color: #777;
+}
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    margin: 0 0.5rem;
+footer a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
 
-    &:hover {
-      text-decoration: underline;
-    }
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 767px) {
+  body {
+    padding: 1rem;
+  }
+
+  .city-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-card {
+    width: 100%;
+  }
+
+  .note-previews {
+    gap: 1.5rem;
   }
 }
