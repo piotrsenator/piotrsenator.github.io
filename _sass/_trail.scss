@@ -19,8 +19,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: filter 0.3s ease;
     display: block;
+    transition: filter 0.3s ease;
   }
 
   .trip-caption {
@@ -49,11 +49,5 @@
     img {
       filter: brightness(0.85);
     }
-  }
-}
-
-@media (max-width: 767px) {
-  .trip-card {
-    width: 100%;
   }
 }
