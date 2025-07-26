@@ -4,22 +4,7 @@ layout: default
 <main class="page-wrapper city-page">
   <article>
     <h1 class="page-title">{{ page.title }}</h1>
-
-    <section class="city-tiles">
-      {% assign city = page.slug | downcase %}
-      {% for note in site.city_notes %}
-        {% assign note_city = note.city | downcase %}
-        {% if note_city == city %}
-          <a href="{{ note.url }}" class="city-note-tile" aria-label="{{ note.title }}">
-            {% if note.cover_image %}
-              <img src="/assets/images/{{ note.cover_image }}" alt="{{ note.title }}">
-            {% endif %}
-            <span>{{ note.title }}</span>
-          </a>
-        {% endif %}
-      {% endfor %}
-    </section>
-
+    {{ content }}
     <div class="button-center" style="margin-top: 2rem;">
       <a class="button subtle" href="/my-cities/">← Back to cities</a>
     </div>
