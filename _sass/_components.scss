@@ -1,4 +1,12 @@
-/* Przycisk - styl podstawowy */
+/* ==========================================================================
+   KOMPONENTY UI
+   ========================================================================== */
+
+/* ==========================================================================
+   PRZYCISKI
+   ========================================================================== */
+
+/* Podstawowy przycisk */
 .button {
   background-color: #1a1a1a;
   color: #fff;
@@ -11,42 +19,46 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: inline-block;
+
+  &:hover,
+  &:focus {
+    background-color: #444;
+    outline: none;
+  }
 }
 
-.button:hover,
-.button:focus {
-  background-color: #444;
-  outline: none;
-}
-
-/* Przycisk subtelny - transparentny z obramowaniem */
+/* Subtelny przycisk: przezroczyste tło, cienka ramka */
 .button.subtle {
   background-color: transparent;
   color: #1a1a1a;
   border: 1px solid #ccc;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: #f0f0f0;
+    color: #000;
+    outline: none;
+  }
 }
 
-.button.subtle:hover,
-.button.subtle:focus {
-  background-color: #f0f0f0;
-  color: #000;
-  outline: none;
-}
-
-/* Kontener centrujący przycisk(y) */
+/* Centrowanie przycisków */
 .button-center {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
 
-/* Link w galerii - blokowy, z zaokrąglonymi rogami i ukrytym przelewem */
+/* ==========================================================================
+   GALERIA
+   ========================================================================== */
+
+/* Link okalający element galerii */
 .gallery-item-link {
   display: block;
   position: relative;
@@ -56,25 +68,18 @@
   color: inherit;
 }
 
-/* Obraz w galerii - pełne wypełnienie, dobre dopasowanie */
+/* Obraz w galerii */
 .gallery-item-image {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; /* pozwala dobrze dopasować obraz bez rozciągania */
+  object-fit: cover;
 }
 
-/* Napis na zdjęciu w galerii - półprzezroczysty pasek od dołu */
+/* Napis na obrazie w galerii */
 .gallery-item-caption {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(31, 61, 45, 0.7);
-  color: white;
-  padding: 0.5rem;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1rem;
-  text-align: center;
-  user-select: none;
-}
+  background
