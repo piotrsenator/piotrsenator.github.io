@@ -4,6 +4,22 @@
   gap: 1.5rem;
   justify-content: center;
 }
+.trip-cover img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ccc;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.trip-date {
+  margin-top: 2rem;
+  text-align: right;
+  color: #666;
+  font-size: 0.9rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
 
 .trip-card {
   width: calc(33.333% - 1rem);
