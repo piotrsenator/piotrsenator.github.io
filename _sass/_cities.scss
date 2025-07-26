@@ -56,8 +56,16 @@
   color: #1a1a1a;
   user-select: none;
   pointer-events: none; /* Kliknięcie zawsze trafia na link */
-}
 
+  opacity: 0;          /* Ukryte domyślnie */
+  visibility: hidden;  /* Element nie zajmuje miejsca */
+  transition: opacity 0.3s ease;
+}
+.city-tiles a.city-note-tile:hover span,
+.city-tiles a.city-note-tile:focus-visible span {
+  opacity: 1;          /* Pokaż napis przy hover/focus */
+  visibility: visible;
+}
 /* ========================================================================== 
    STRONA POJEDYNCZEJ NOTATKI MIEJSCA (city note page)
    ========================================================================== */
