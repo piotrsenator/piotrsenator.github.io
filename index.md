@@ -22,21 +22,22 @@ title: Piotr Senator
     </section>
   </section>
 
-  <section class="home-trail">
-    <h2>Off the Trail</h2>
-    <div class="trip-gallery">
-      {% assign latest_trips = site.trips | sort: 'date' | reverse | slice: 0, 3 %}
-      {% for trip in latest_trips %}
-        <a class="trip-card" href="{{ trip.url }}">
-          <img src="{{ trip.image | default: '/assets/images/placeholder.jpg' }}" alt="{{ trip.title }}">
-          <div class="trip-caption">{{ trip.title }}</div>
-        </a>
-      {% endfor %}
-    </div>
-    <div class="button-center">
-      <a class="button subtle" href="/off-the-trail/">View all excursions</a>
-    </div>
-  </section>
+<section class="home-trail">
+  <h2>Off the Trail</h2>
+  <div class="trip-gallery">
+    {% assign latest_trips = site.trips | sort: 'date' | reverse | slice: 0, 3 %}
+    {% for trip in latest_trips %}
+      {% assign image_path = trip.cover_image | default: 'trips__placeholder.jpg' %}
+      <a class="trip-card" href="{{ trip.url }}">
+        <img src="/assets/images/trips/{{ image_path }}" alt="{{ trip.title }}">
+        <div class="trip-caption">{{ trip.title }}</div>
+      </a>
+    {% endfor %}
+  </div>
+  <div class="button-center">
+    <a class="button subtle" href="/off-the-trail/">View all excursions</a>
+  </div>
+</section>
 
   <section class="home-notes">
     <h2>Notes</h2>
