@@ -10,29 +10,46 @@
   aspect-ratio: 4 / 3;
   border: 1px solid #ccc;
   overflow: hidden;
+  position: relative;
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease;
-  position: relative;
-}
 
-.trip-card:hover {
-  transform: scale(1.03);
-}
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+    display: block;
+  }
 
-.trip-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .trip-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(31, 61, 45, 0.7), rgba(31, 61, 45, 0));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
 
-.trip-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 0.5rem 1rem;
-  font-weight: 600;
+  &:hover {
+    transform: scale(1.03);
+
+    img {
+      filter: brightness(0.85);
+    }
+  }
 }
 
 @media (max-width: 767px) {
