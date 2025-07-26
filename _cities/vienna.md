@@ -1,67 +1,30 @@
----
-layout: city
-title: Vienna
-slug: vienna
-permalink: /cities/vienna/
----
+    {% assign city = page.slug | downcase %}
+    {% assign categories = 
+      "food,walks,culture,trips" | split: "," %}
 
-{% assign city = 'vienna' | downcase %}
+    {% assign category_names = 
+      "Food & Drink,Walks & Views,Arts & Heritage,Outings & Excursions" | split: "," %}
 
-<main class="page-wrapper city-page">
-  <article>
-    <h1 class="page-title">{{ page.title }}</h1>
+    {% for i in (0..categories.size - 1) %}
+      {% assign category = categories[i] %}
+      {% assign category_name = category_names[i] %}
 
-    <section class="city-category">
-      <h2>Food & Drink</h2>
-      <ul>
-      {% assign category = 'food' %}
-      {% for note in site.city_notes %}
-        {% assign note_city = note.city | downcase %}
-        {% if note_city == city and note.category == category %}
-          <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      </ul>
-    </section>
-
-    <section class="city-category">
-      <h2>Walks & Views</h2>
-      <ul>
-      {% assign category = 'walks' %}
-      {% for note in site.city_notes %}
-        {% assign note_city = note.city | downcase %}
-        {% if note_city == city and note.category == category %}
-          <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      </ul>
-    </section>
-
-    <section class="city-category">
-      <h2>Arts & Heritage</h2>
-      <ul>
-      {% assign category = 'culture' %}
-      {% for note in site.city_notes %}
-        {% assign note_city = note.city | downcase %}
-        {% if note_city == city and note.category == category %}
-          <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      </ul>
-    </section>
-
-    <section class="city-category">
-      <h2>Outings & Excursions</h2>
-      <ul>
-      {% assign category = 'trips' %}
-      {% for note in site.city_notes %}
-        {% assign note_city = note.city | downcase %}
-        {% if note_city == city and note.category == category %}
-          <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      </ul>
-    </section>
-
-  </article>
-</main>
+      <section class="city-category">
+        <h2>{{ category_name }}</h2>
+        <div class="city-tiles">
+          {% assign notes_in_category = site.city_notes | where: "category", category %}
+          {% assign notes_for_city = notes_in_category | where: "city", city %}
+          {% for note in notes_for_city %}
+            <a href="{{ note.url }}" class="city-note-tile" aria-label="{{ note.title }}">
+              {% if note.cover_image %}
+                <img src="/assets/images/{{ note.cover_image }}" alt="{{ note.title }}">
+              {% endif %}
+              <span>{{ note.title }}</span>
+            </a>
+          {% endfor %}
+          {% if notes_for_city == empty %}
+            <p>No entries yet.</p>
+          {% endif %}
+        </div>
+      </section>
+    {% endfor %}
