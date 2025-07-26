@@ -39,20 +39,21 @@ title: Piotr Senator
   </div>
 </section>
 
-  <section class="home-notes">
-    <h2>Notes</h2>
-    <div class="note-previews-grid">
-      {% assign latest_notes = site.notes | sort: 'date' | reverse | slice: 0, 3 %}
-      {% for note in latest_notes %}
-        <article class="note-card">
-          <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
-          <p>{{ note.excerpt | strip_html | truncate: 160 }}</p>
-        </article>
-      {% endfor %}
-    </div>
-    <div class="button-center">
-      <a class="button subtle" href="/notes/">View all notes</a>
-    </div>
-  </section>
+<section class="home-notes"> 
+  <h2>Notes</h2>
+  <div class="note-previews-grid">
+    {% assign latest_notes = site.notes | sort: 'date' | reverse | slice: 0, 2 %}
+    {% for note in latest_notes %}
+      <article class="note-card">
+        <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
+        <p>{{ note.excerpt | strip_html | truncate: 160 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+  <div class="button-center">
+    <a class="button subtle" href="/notes/">View all notes</a>
+  </div>
+</section>
+
 
 </main>
