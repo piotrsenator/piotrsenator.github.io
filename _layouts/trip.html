@@ -10,12 +10,12 @@ layout: default
   </div>
 
   <div class="trip-content">
-    {{ content | replace: "](", "](/assets/images/trips/" }}
+    {{ content }}
   </div>
 
   <p class="trip-date">{{ page.date | date: "%d %B %Y" }}</p>
 
   <div class="button-center">
-    <a class="button subtle" href="/off-the-trail/">← Back to all excursions</a>
+    <a class="button subtle" href="/off-the-trail/">All excursions</a>
   </div>
 </article>
