@@ -1,55 +1,60 @@
 /* ==========================================================================
-   NOTES – LISTA, KARTY I POJEDYNCZE NOTATKI
+   NOTES – SIATKA KAFELKÓW I POJEDYNCZE NOTATKI
    ========================================================================== */
 
-/* --- Siatka kart notatek --- */
-.note-previews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+/* --- Wrapper siatki notatek --- */
+.note-wrapper {
+  margin-top: 2rem;
 }
 
-/* --- Pojedyncza karta notatki --- */
-.note-card {
+/* --- Siatka kafelków --- */
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- Kafelek notatki jako cały link --- */
+.note-tile {
+  display: block;
   background-color: #f9f9f9;
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  h3 {
+    font-size: 1.25rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .note-date {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #999;
+    text-align: right;
+  }
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   }
-
-  h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 600;
-
-    a {
-      color: #1a1a1a;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s ease;
-
-      &:hover {
-        border-bottom: 1px solid #1a1a1a;
-      }
-    }
-  }
-
-  p {
-    color: #444;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0;
-  }
 }
 
-/* --- Pojedyncza notatka: obraz nagłówkowy --- */
+/* --- Obrazek nagłówkowy pojedynczej notatki --- */
 .note-cover {
   max-width: 75%;
   aspect-ratio: 16 / 9;
@@ -66,7 +71,7 @@
   }
 }
 
-/* --- Pojedyncza notatka: data --- */
+/* --- Data w pojedynczej notatce --- */
 .note-date {
   text-align: right;
   font-size: 0.9rem;
@@ -78,9 +83,8 @@
 /* ==========================================================================
    RESPONSYWNOŚĆ
    ========================================================================== */
-
 @media (max-width: 767px) {
-  .note-previews-grid {
+  .note-grid {
     gap: 1.25rem;
   }
 
