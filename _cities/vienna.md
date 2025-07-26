@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Vienna
-permalink: /my-cities/
+slug: vienna
 ---
 <main class="page-wrapper city-page">
   <article>
