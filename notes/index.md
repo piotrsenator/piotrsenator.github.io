@@ -4,18 +4,16 @@ title: Notes
 permalink: /notes/
 ---
 
-<main>
-  <div class="page-wrapper">
-    <h1 class="page-title">Notes</h1>
+<section class="note-wrapper page-wrapper">
+  <h1 class="page-title">Notes</h1>
 
-    <div class="note-previews-grid">
-      {% for note in site.notes %}
-        <article class="note-card">
-          <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
-          <p>{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
-          <p class="note-date">{{ note.date | date: "%d %B %Y" }}</p>
-        </article>
-      {% endfor %}
-    </div>
+  <div class="note-grid">
+    {% for note in site.notes %}
+      <a href="{{ note.url }}" class="note-tile">
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.excerpt | strip_html | truncate: 160 }}</p>
+        <span class="note-date">{{ note.date | date: "%d %B %Y" }}</span>
+      </a>
+    {% endfor %}
   </div>
-</main>
+</section>
