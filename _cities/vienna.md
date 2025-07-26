@@ -5,8 +5,6 @@ title: Vienna
 <main class="page-wrapper city-page">
   <article>
     <h1 class="page-title">{{ page.title }}</h1>
-    {{ content }}
-
     <section>
       <h2>Notes about {{ page.title }}</h2>
       <ul>
