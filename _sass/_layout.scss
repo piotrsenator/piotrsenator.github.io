@@ -1,59 +1,81 @@
+/* ==========================================================================
+   LAYOUT: STRONA GŁÓWNA
+   ========================================================================== */
 
-
+/* --- Wprowadzenie / sekcja powitalna --- */
 .intro {
   margin-bottom: 2rem;
   text-align: center;
 }
 
+/* --- Wrapper główny strony --- */
 .home-wrapper {
-  padding: 0 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
+/* --- Tytuły sekcji na stronie głównej --- */
 .home-wrapper h2 {
-  margin-bottom: 1rem;
   font-size: 2rem;
-}
-
-.home-about p {
-  max-width: 700px;
   margin-bottom: 1rem;
-  text-align: left;
-  font-size: 1.05rem;
 }
 
-.home-about a {
-  margin-top: 1rem;
-  display: inline-block;
-  color: #1a1a1a;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.home-about a:hover {
-  text-decoration: underline;
-}
-.home-about-and-cities {
-  display: flex;
-  gap: 2rem;
-  /* margin-bottom: 3rem; */
-}
+/* ==========================================================================
+   SEKJA O MNIE
+   ========================================================================== */
 
 .home-about {
   flex: 1 1 33.33%;
   max-width: 33.33%;
 }
 
+.home-about p {
+  max-width: 700px;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.home-about a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ==========================================================================
+   KAFELKI MIEJSKIE
+   ========================================================================== */
+
 .home-cities {
   flex: 1 1 66.66%;
   max-width: 66.66%;
 }
 
+/* ==========================================================================
+   UKŁAD FLEX – SEKCJA O MNIE + KAFELKI
+   ========================================================================== */
+
+.home-about-and-cities {
+  display: flex;
+  gap: 2rem;
+}
+
+/* ==========================================================================
+   RESPONSYWNOŚĆ
+   ========================================================================== */
+
 @media (max-width: 767px) {
   .home-about-and-cities {
     flex-direction: column;
   }
+
   .home-about,
   .home-cities {
     max-width: 100%;
