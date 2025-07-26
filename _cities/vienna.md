@@ -1,3 +1,6 @@
+---
+layout: default
+---
     {% assign city = page.slug | downcase %}
     {% assign categories = 
       "food,walks,culture,trips" | split: "," %}
