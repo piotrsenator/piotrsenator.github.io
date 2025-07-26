@@ -9,7 +9,7 @@ permalink: /off-the-trail/
 <div class="trip-gallery">
   {% for trip in site.trips %}
     <a href="{{ trip.url }}">
-      <img src="/assets/images/trip__{{ trip.slug }}__1.jpg" alt="{{ trip.title }}">
+      <img src="/assets/images/trips/{{ trip.cover_image | default: 'trips__placeholder.jpg' }}" alt="{{ trip.title }}">
     </a>
   {% endfor %}
 </div>
