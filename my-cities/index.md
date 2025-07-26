@@ -9,15 +9,15 @@ permalink: /my-cities/
   <p>These are the cities that shaped me — places where I left a part of my heart and where I feel at home.</p>
 
   <div class="city-tiles">
-    <a href="/cities/vienna/">
+    <a href="/cities/vienna/" class="city-note-tile">
       <img src="/assets/images/city__vienna__1.jpg" alt="Vienna">
       <span>Vienna</span>
     </a>
-    <a href="/cities/warsaw/">
+    <a href="/cities/warsaw/" class="city-note-tile">
       <img src="/assets/images/city__warsaw__1.jpg" alt="Warsaw">
       <span>Warsaw</span>
     </a>
-    <a href="/cities/luxembourg/">
+    <a href="/cities/luxembourg/" class="city-note-tile">
       <img src="/assets/images/city__luxembourg__1.jpg" alt="Luxembourg">
       <span>Luxembourg</span>
     </a>
