@@ -18,7 +18,7 @@
 .note-tile {
   display: block;
   background-color: #f9f9f9;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0.75rem 1.5rem; /* góra, prawo, dół, lewo */
   border: 1px solid #ddd;
   border-radius: 6px;
   text-decoration: none;
