@@ -4,6 +4,12 @@ title: Vienna
 slug: vienna
 permalink: /cities/vienna/
 ---
+---
+layout: city
+title: Vienna
+slug: vienna
+permalink: /cities/vienna/
+---
 <h2>🛠 Debug Info</h2>
 <ul>
   <li><strong>page.title:</strong> {{ page.title }}</li>
@@ -62,4 +68,3 @@ permalink: /cities/vienna/
   {% endif %}
 {% endfor %}
 <hr>
-
