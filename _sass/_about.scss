@@ -66,10 +66,16 @@
 @media (max-width: 768px) {
   .about-wrapper {
     flex-direction: column;
-    padding: 0 1rem;
   }
 
+  /* W mobilnym widoku tekst ma być pierwszy */
+  .about-text {
+    order: 1;
+  }
+
+  /* Zdjęcie ma być po tekście */
   .about-photo {
+    order: 2;
     flex: none;
     width: 100%;
     aspect-ratio: auto;
