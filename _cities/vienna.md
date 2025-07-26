@@ -10,7 +10,7 @@ permalink: /cities/vienna/
 ## Food & Drink
 {% assign category = 'food' %}
 {% for note in site.notes %}
-  {% if note.tags contains city and note.category == category %}
+  {% if note.city == city and note.category == category %}
   - [{{ note.title }}]({{ note.url }})
   {% endif %}
 {% endfor %}
@@ -18,7 +18,7 @@ permalink: /cities/vienna/
 ## Walks & Views
 {% assign category = 'walks' %}
 {% for note in site.notes %}
-  {% if note.tags contains city and note.category == category %}
+  {% if note.city == city and note.category == category %}
   - [{{ note.title }}]({{ note.url }})
   {% endif %}
 {% endfor %}
@@ -26,7 +26,7 @@ permalink: /cities/vienna/
 ## Arts & Heritage
 {% assign category = 'culture' %}
 {% for note in site.notes %}
-  {% if note.tags contains city and note.category == category %}
+  {% if note.city == city and note.category == category %}
   - [{{ note.title }}]({{ note.url }})
   {% endif %}
 {% endfor %}
@@ -34,7 +34,7 @@ permalink: /cities/vienna/
 ## Outings & Excursions
 {% assign category = 'trips' %}
 {% for note in site.notes %}
-  {% if note.tags contains city and note.category == category %}
+  {% if note.city == city and note.category == category %}
   - [{{ note.title }}]({{ note.url }})
   {% endif %}
 {% endfor %}
