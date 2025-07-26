@@ -26,7 +26,10 @@ permalink: /cities/vienna/
 
 <hr>
 
-{% assign city = page.slug | downcase %}
+
+
+
+{% assign city = "vienna" %}
 {% assign categories = "food,walks,culture,trips" | split: "," %}
 {% assign category_names = "Food & Drink,Walks & Views,Arts & Heritage,Outings & Excursions" | split: "," %}
 
