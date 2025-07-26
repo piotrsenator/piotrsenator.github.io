@@ -2,37 +2,67 @@
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  margin: 2rem auto 3rem;
-  max-width: 900px;
-  padding: 0 1rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
 }
 
 .about-photo {
   flex: 0 0 300px;
   max-width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: white;
+  aspect-ratio: 3 / 4;
 }
 
 .about-photo img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
-  flex: 1 1 400px;
+  flex: 1;
+  min-width: 250px;
   font-size: 1rem;
   line-height: 1.6;
-  min-width: 250px;
+  color: #222;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.linkedin-link {
+  color: #1F3D2D; /* butelkowa zieleń */
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.linkedin-link:hover,
+.linkedin-link:focus {
+  border-color: #1F3D2D;
+  outline: none;
 }
 
 @media (max-width: 768px) {
   .about-wrapper {
     flex-direction: column;
+    padding: 0 1rem;
   }
 
   .about-photo {
-    margin-bottom: 1rem;
+    flex: none;
+    width: 100%;
+    aspect-ratio: auto;
+    max-height: 400px;
   }
 }
