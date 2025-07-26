@@ -29,12 +29,12 @@ permalink: /cities/vienna/
 
 
 
-{% assign city = "vienna" %}
+{% assign city = page.slug | downcase %}
+<p><strong>city:</strong> {{ city }}</p>
 {% assign categories = "food,walks,culture,trips" | split: "," %}
 {% assign category_names = "Food & Drink,Walks & Views,Arts & Heritage,Outings & Excursions" | split: "," %}
 
 <h2>🔧 Debug kategorii i notatek</h2>
-
 {% for i in (0..categories.size - 1) %}
   {% assign category = categories[i] %}
   {% assign category_name = category_names[i] %}
@@ -43,12 +43,11 @@ permalink: /cities/vienna/
 
   {% assign notes_in_category = site.city_notes | where: "category", category %}
   {% assign notes_for_city = notes_in_category | where: "city", city %}
-
+  
   <p><strong>notes_in_category.size:</strong> {{ notes_in_category.size }}  
-     | <strong>notes_for_city.size:</strong> {{ notes_for_city.size }}</p>
-
+    | <strong>notes_for_city.size:</strong> {{ notes_for_city.size }}</p>
   {% if notes_for_city.size == 0 %}
-    <p>No entries yet.</p>
+  <p>No entries yet.</p>
   {% else %}
     <ul>
     {% for note in notes_for_city %}
