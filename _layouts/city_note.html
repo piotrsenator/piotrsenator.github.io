@@ -4,7 +4,9 @@ layout: default
 
 <main class="page-wrapper city-note-page">
   <article class="city-note">
-    <h1 class="page-title">{{ page.title }}</h1>
+    <header>
+      <h1 class="page-title">{{ page.title }}</h1>
+    </header>
 
     {% if page.cover_image %}
       <div class="note-cover">
@@ -20,8 +22,8 @@ layout: default
       {{ content }}
     </div>
 
-    <p class="back-link">
-      <a href="/cities/{{ page.slug | default: 'vienna' }}/">← Back to city notes</a>
-    </p>
+    <div class="button-center" style="margin-top: 2rem;">
+      <a href="/cities/{{ page.slug | default: 'vienna' }}/" class="button subtle">← Back to city notes</a>
+    </div>
   </article>
 </main>
