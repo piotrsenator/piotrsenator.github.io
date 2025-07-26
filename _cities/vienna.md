@@ -1,5 +1,6 @@
 ---
 layout: city
+title: Vienna
 ---
 
     {% assign city = page.slug | downcase %}
