@@ -1,4 +1,8 @@
-/* --- Reset i podstawowe ustawienia --- */
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+/* --- Reset i box model --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,19 +13,23 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ==========================================================================
+   TYPOGRAFIA GLOBALNA
+   ========================================================================== */
+
 body {
   max-width: 1000px;
   margin-left: 0;
   margin-right: 0;
+  padding: 1rem;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
   color: #1a1a1a;
-  padding: 1rem;
+  background-color: #fff;
 }
 
-/* --- Nagłówki globalne --- */
+/* --- Nagłówki --- */
 h1 {
   font-family: "Syne", sans-serif;
   font-weight: 700;
@@ -38,27 +46,35 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
-/* --- Sekcje --- */
+/* ==========================================================================
+   STRUKTURA STRONY
+   ========================================================================== */
+
+/* --- Sekcje treści --- */
 section {
   margin-bottom: 1rem;
 }
 
-/* --- Strona główna i podstrony: wrapper i tytuł --- */
+/* --- Wrapper na stronach wewnętrznych --- */
 .page-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
 
+/* --- Tytuł strony (różni się od globalnego h1) --- */
 .page-title {
   font-family: "Syne", sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
+  text-align: left;
   margin-bottom: 1.5rem;
-  text-align: left; /* tytuł wyrównany do lewej, różni się od globalnego h1 */
 }
 
-/* --- Responsywność --- */
+/* ==========================================================================
+   RESPONSYWNOŚĆ
+   ========================================================================== */
+
 @media (max-width: 767px) {
   body {
     padding: 1rem;
