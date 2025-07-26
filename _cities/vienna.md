@@ -1,7 +1,11 @@
 ---
-layout: city
+layout: default
 title: Vienna
+permalink: /my-cities/
 ---
+<main class="page-wrapper city-page">
+  <article>
+    <h1 class="page-title">{{ page.title }}</h1>
 TEST CITIES VIENNA
 {% assign city = page.slug | downcase %}
 {% assign categories = "food,walks,culture,trips" | split: "," %}
@@ -31,3 +35,8 @@ TEST CITIES VIENNA
     </div>
   </section>
 {% endfor %}
+    <div class="button-center" style="margin-top: 2rem;">
+      <a class="button subtle" href="/my-cities/">← Back to cities</a>
+    </div>
+  </article>
+</main>
