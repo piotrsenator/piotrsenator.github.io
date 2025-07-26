@@ -1,8 +1,8 @@
 ---
 layout: city
 title: Vienna
-slug: vienna
 ---
+TEST CITIES VIENNA
 {% assign city = page.slug | downcase %}
 {% assign categories = "food,walks,culture,trips" | split: "," %}
 {% assign category_names = "Food & Drink,Walks & Views,Arts & Heritage,Outings & Excursions" | split: "," %}
