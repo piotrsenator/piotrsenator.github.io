@@ -1,3 +1,4 @@
+/* --- Reset i podstawowe ustawienia --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,6 +21,7 @@ body {
   padding: 1rem;
 }
 
+/* --- Nagłówki globalne --- */
 h1 {
   font-family: "Syne", sans-serif;
   font-weight: 700;
@@ -36,10 +38,27 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
+/* --- Sekcje --- */
 section {
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
+/* --- Strona główna i podstrony: wrapper i tytuł --- */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.page-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left; /* tytuł wyrównany do lewej, różni się od globalnego h1 */
+}
+
+/* --- Responsywność --- */
 @media (max-width: 767px) {
   body {
     padding: 1rem;
