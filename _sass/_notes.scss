@@ -1,7 +1,8 @@
 /* ==========================================================================
-   NOTES – PODGLĄDY I KARTY NOTATEK
+   NOTES – LISTA, KARTY I POJEDYNCZE NOTATKI
    ========================================================================== */
 
+/* --- Siatka kart notatek --- */
 .note-previews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -9,13 +10,14 @@
   margin-top: 1rem;
 }
 
+/* --- Pojedyncza karta notatki --- */
 .note-card {
   background-color: #f9f9f9;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none; /* brak obramowania */
-  
+  border: none;
+
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -47,6 +49,32 @@
   }
 }
 
+/* --- Pojedyncza notatka: obraz nagłówkowy --- */
+.note-cover {
+  max-width: 75%;
+  aspect-ratio: 16 / 9;
+  margin: 2rem auto 1.5rem auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+/* --- Pojedyncza notatka: data --- */
+.note-date {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #999;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin-bottom: 2rem;
+}
+
 /* ==========================================================================
    RESPONSYWNOŚĆ
    ========================================================================== */
@@ -54,5 +82,9 @@
 @media (max-width: 767px) {
   .note-previews-grid {
     gap: 1.25rem;
+  }
+
+  .note-cover {
+    max-width: 100%;
   }
 }
