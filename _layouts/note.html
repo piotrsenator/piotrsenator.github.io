@@ -2,26 +2,30 @@
 layout: default
 ---
 
-<main class="page-wrapper">
-  <article class="note">
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% if page.date %}
-      <p class="note-meta">{{ page.date | date: "%d %B %Y" }}</p>
-    {% endif %}
+<main>
+  <div class="page-wrapper">
+    <article class="note">
 
-    <div class="page-content">
-      {{ content }}
-    </div>
+      <h1 class="page-title">{{ page.title }}</h1>
 
-    {% if page.tags %}
-      <div class="tags">
-        <strong>Tags:</strong>
-        {% for tag in page.tags %}
-          <span>{{ tag }}</span>
-        {% endfor %}
+      {% if page.cover_image %}
+        <div class="note-cover">
+          <img src="/assets/images/notes/{{ page.cover_image }}" alt="{{ page.title }}">
+        </div>
+      {% endif %}
+
+      {% if page.date %}
+        <p class="note-date">{{ page.date | date: "%d %B %Y" }}</p>
+      {% endif %}
+
+      <div class="page-content">
+        {{ content }}
       </div>
-    {% endif %}
 
-    <p class="back-link"><a href="/notes/">← Wszystkie notatki</a></p>
-  </article>
+      <div class="button-center">
+        <a class="button subtle" href="/notes/">← Wszystkie notatki</a>
+      </div>
+
+    </article>
+  </div>
 </main>
