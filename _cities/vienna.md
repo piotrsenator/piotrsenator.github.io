@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: city
 ---
     {% assign city = page.slug | downcase %}
     {% assign categories = 
