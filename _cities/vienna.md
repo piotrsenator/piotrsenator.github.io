@@ -1,17 +1,10 @@
 ---
-layout: default
+layout: city
 title: Vienna
 slug: vienna
+permalink: /cities/vienna/
 ---
-<main class="page-wrapper city-page">
-  <article>
-    <h1 class="page-title">{{ page.title }}</h1>
-TEST CITIES VIENNA
-    <ul>
-  {% for note in site.city_notes %}
-    <li>{{ note.title }} – city: {{ note.city }} – category: {{ note.category }}</li>
-  {% endfor %}
-</ul>
+
 {% assign city = page.slug | downcase %}
 {% assign categories = "food,walks,culture,trips" | split: "," %}
 {% assign category_names = "Food & Drink,Walks & Views,Arts & Heritage,Outings & Excursions" | split: "," %}
@@ -40,8 +33,3 @@ TEST CITIES VIENNA
     </div>
   </section>
 {% endfor %}
-    <div class="button-center" style="margin-top: 2rem;">
-      <a class="button subtle" href="/my-cities/">← Back to cities</a>
-    </div>
-  </article>
-</main>
