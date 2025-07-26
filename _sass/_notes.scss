@@ -1,3 +1,7 @@
+/* ==========================================================================
+   NOTES – PODGLĄDY I KARTY NOTATEK
+   ========================================================================== */
+
 .note-previews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -10,38 +14,42 @@
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none; /* brak border-radius i border: czysto */
+  border: none; /* brak obramowania */
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+
+    a {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+
+      &:hover {
+        border-bottom: 1px solid #1a1a1a;
+      }
+    }
+  }
+
+  p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
 }
 
-.note-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.note-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 600;
-}
-
-.note-card h3 a {
-  color: #1a1a1a;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-}
-
-.note-card h3 a:hover {
-  border-bottom: 1px solid #1a1a1a;
-}
-
-.note-card p {
-  color: #444;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-}
+/* ==========================================================================
+   RESPONSYWNOŚĆ
+   ========================================================================== */
 
 @media (max-width: 767px) {
   .note-previews-grid {
