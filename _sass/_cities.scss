@@ -100,7 +100,7 @@
   }
 
   .city-tiles a.city-note-tile span {
-    font-size: 1.1rem;
-    padding: 0.75rem 0;
+    font-size: 1.8rem; /* większy rozmiar tekstu na małych ekranach */
+    padding: 1rem 1.5rem; /* większy padding, by napis miał przestrzeń */
   }
 }
