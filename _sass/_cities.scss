@@ -1,50 +1,65 @@
-/* ==========================================================================
+/* ========================================================================== 
    MIASTA – KAFELKI Z MIEJSCAMI
    ========================================================================== */
 
 /* Siatka kafelków */
 .city-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-
-  a {
-    max-width: 150px;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease;
-    margin: 0 auto;
-
-    &:hover {
-      transform: scale(1.02);
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    span {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 0.5rem 0;
-      background-color: rgba(255, 255, 255, 0.85);
-      font-weight: 600;
-      text-align: center;
-    }
-  }
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* elastyczna szerokość, min 180px */
+  gap: 1.25rem; /* trochę większy odstęp dla elegancji */
+  justify-content: center; /* wyśrodkowanie siatki jeśli jest mniej elementów */
+  margin-top: 1.5rem;
 }
 
-/* ==========================================================================
+.city-tiles a {
+  display: block;
+  width: 100%;
+  max-width: 220px; /* ograniczenie maksymalnej szerokości kafelka */
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* lekko zaokrąglone rogi dla subtelności */
+  text-decoration: none;
+  color: inherit;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+}
+
+.city-tiles a:hover,
+.city-tiles a:focus-visible {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.city-tiles a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.city-tiles a span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.6rem 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  color: #1a1a1a;
+  user-select: none;
+  pointer-events: none; /* żeby kliknięcie zawsze szło na link */
+}
+
+/* ========================================================================== 
    RESPONSYWNOŚĆ
    ========================================================================== */
 
@@ -60,5 +75,16 @@
 
   .city-tiles {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .city-tiles a {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .city-tiles a span {
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
   }
 }
