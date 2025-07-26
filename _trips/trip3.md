@@ -1,10 +1,8 @@
-
 ---
-layout: trip
 title: Saturday Bike Tour 3
 date: 2025-07-12
-slug: bike-tour
+cover_image:hike.jpg
 ---
-Bla bala
+A tu jest kolejna wycieczka
 
-![Hike](/images/trips/hike.jpg)
+![Hike](hike.jpg)
