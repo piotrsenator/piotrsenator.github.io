@@ -2,6 +2,7 @@
 layout: default
 title: About Me
 ---
+<h1 class="page-title">About Me</h1>
 <div class="about-wrapper">
   <div class="about-photo">
     <img src="/assets/images/about.jpg" alt="Portrait of Piotr Senator" />
