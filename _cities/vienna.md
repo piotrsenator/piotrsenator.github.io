@@ -25,31 +25,39 @@ permalink: /cities/vienna/
 </ul>
 
 <hr>
+
 {% assign city = page.slug | downcase %}
 {% assign categories = "food,walks,culture,trips" | split: "," %}
 {% assign category_names = "Food & Drink,Walks & Views,Arts & Heritage,Outings & Excursions" | split: "," %}
+
+<h2>🔧 Debug kategorii i notatek</h2>
 
 {% for i in (0..categories.size - 1) %}
   {% assign category = categories[i] %}
   {% assign category_name = category_names[i] %}
 
-  <section class="city-category">
-    <h2>{{ category_name }}</h2>
-    <div class="city-tiles">
-      {% assign notes_in_category = site.city_notes | where: "category", category %}
-      {% assign notes_for_city = notes_in_category | where: "city", city %}
-      {% if notes_for_city.size == 0 %}
-        <p>No entries yet.</p>
-      {% else %}
-        {% for note in notes_for_city %}
-          <a href="{{ note.url }}" class="city-note-tile" aria-label="{{ note.title }}">
-            {% if note.cover_image %}
-              <img src="/assets/images/{{ note.cover_image }}" alt="{{ note.title }}">
-            {% endif %}
-            <span>{{ note.title }}</span>
-          </a>
-        {% endfor %}
-      {% endif %}
-    </div>
-  </section>
+  <h3>Category: {{ category_name }} (key: <code>{{ category }}</code>)</h3>
+
+  {% assign notes_in_category = site.city_notes | where: "category", category %}
+  {% assign notes_for_city = notes_in_category | where: "city", city %}
+
+  <p><strong>notes_in_category.size:</strong> {{ notes_in_category.size }}  
+     | <strong>notes_for_city.size:</strong> {{ notes_for_city.size }}</p>
+
+  {% if notes_for_city.size == 0 %}
+    <p>No entries yet.</p>
+  {% else %}
+    <ul>
+    {% for note in notes_for_city %}
+      <li>
+        <strong>{{ note.title }}</strong> — 
+        city: <code>{{ note.city }}</code>, 
+        category: <code>{{ note.category }}</code>, 
+        url: <code>{{ note.url }}</code>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
 {% endfor %}
+<hr>
+
