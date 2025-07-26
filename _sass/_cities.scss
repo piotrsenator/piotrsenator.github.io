@@ -44,26 +44,28 @@
 
 .city-tiles a.city-note-tile span {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.6rem 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* wyśrodkowanie pionowo i poziomo */
+  width: auto; /* lub 100% jeśli chcesz, żeby zajmował całą szerokość */
+  padding: 0.6rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5); /* półprzezroczyste czarne tło */
+  color: #fff; /* tekst na biało dla lepszej czytelności */
   font-weight: 600;
-  text-align: center;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1rem;
-  color: #1a1a1a;
+  text-align: center;
   user-select: none;
-  pointer-events: none; /* Kliknięcie zawsze trafia na link */
+  pointer-events: none;
 
-  opacity: 0;          /* Ukryte domyślnie */
-  visibility: hidden;  /* Element nie zajmuje miejsca */
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease;
 }
+
 .city-tiles a.city-note-tile:hover span,
 .city-tiles a.city-note-tile:focus-visible span {
-  opacity: 1;          /* Pokaż napis przy hover/focus */
+  opacity: 1;
   visibility: visible;
 }
 /* ========================================================================== 
