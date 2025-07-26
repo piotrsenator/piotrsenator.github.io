@@ -7,6 +7,11 @@ slug: vienna
   <article>
     <h1 class="page-title">{{ page.title }}</h1>
 TEST CITIES VIENNA
+    <ul>
+  {% for note in site.city_notes %}
+    <li>{{ note.title }} – city: {{ note.city }} – category: {{ note.category }}</li>
+  {% endfor %}
+</ul>
 {% assign city = page.slug | downcase %}
 {% assign categories = "food,walks,culture,trips" | split: "," %}
 {% assign category_names = "Food & Drink,Walks & Views,Arts & Heritage,Outings & Excursions" | split: "," %}
