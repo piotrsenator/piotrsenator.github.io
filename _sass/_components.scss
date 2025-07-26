@@ -40,3 +40,33 @@
   justify-content: center;
   margin-top: 2rem;
 }
+
+.gallery-item-link {
+  display: block;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-item-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* opcjonalnie dla lepszego dopasowania */
+}
+
+.gallery-item-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(31, 61, 45, 0.7);
+  color: white;
+  padding: 0.5rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
