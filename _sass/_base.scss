@@ -60,6 +60,11 @@ section {
   max-width: 100%;
   margin: 0 auto;
   padding: 1rem;
+
+  > p {
+    margin-bottom: 2rem;
+    max-width: 60ch; /* poprawia czytelność tekstu wstępnego */
+  }
 }
 
 /* --- Tytuł strony (różni się od globalnego h1) --- */
