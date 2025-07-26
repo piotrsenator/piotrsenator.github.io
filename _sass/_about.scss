@@ -77,8 +77,10 @@
   .about-photo {
     order: 2;
     flex: none;
-    width: 50%;
-    aspect-ratio: auto;
+    width: 50%;       /* 50% szerokości na małych ekranach */
+    max-width: 50%;
+    margin: 0 auto;   /* wyśrodkowanie poziome */
+    aspect-ratio: 3 / 4;
     max-height: 400px;
   }
 }
