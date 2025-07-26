@@ -1,3 +1,4 @@
+/* Przycisk - styl podstawowy */
 .button {
   background-color: #1a1a1a;
   color: #fff;
@@ -9,38 +10,43 @@
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: #444;
+  outline: none;
 }
+
+/* Przycisk subtelny - transparentny z obramowaniem */
 .button.subtle {
   background-color: transparent;
   color: #1a1a1a;
   border: 1px solid #ccc;
   padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
-  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.button.subtle:hover {
+.button.subtle:hover,
+.button.subtle:focus {
   background-color: #f0f0f0;
   color: #000;
+  outline: none;
 }
 
-.button-center {
-  text-align: center;
-  margin-top: 2rem;
-}
+/* Kontener centrujący przycisk(y) */
 .button-center {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
 
+/* Link w galerii - blokowy, z zaokrąglonymi rogami i ukrytym przelewem */
 .gallery-item-link {
   display: block;
   position: relative;
@@ -50,13 +56,15 @@
   color: inherit;
 }
 
+/* Obraz w galerii - pełne wypełnienie, dobre dopasowanie */
 .gallery-item-image {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; /* opcjonalnie dla lepszego dopasowania */
+  object-fit: cover; /* pozwala dobrze dopasować obraz bez rozciągania */
 }
 
+/* Napis na zdjęciu w galerii - półprzezroczysty pasek od dołu */
 .gallery-item-caption {
   position: absolute;
   bottom: 0;
@@ -68,5 +76,5 @@
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1rem;
   text-align: center;
+  user-select: none;
 }
-
