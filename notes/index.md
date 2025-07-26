@@ -8,13 +8,14 @@ permalink: /notes/
   <div class="page-wrapper">
     <h1 class="page-title">Notes</h1>
 
-    <ul class="note-list">
+    <div class="note-previews-grid">
       {% for note in site.notes %}
-        <li>
-          <a href="{{ note.url }}">{{ note.title }}</a>
-          <span class="date">{{ note.date | date: "%Y-%m-%d" }}</span>
-        </li>
+        <article class="note-card">
+          <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
+          <p>{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
+          <p class="note-date">{{ note.date | date: "%d %B %Y" }}</p>
+        </article>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </main>
