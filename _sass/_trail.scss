@@ -1,9 +1,18 @@
-.trip-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
+/* ==========================================================================
+   TRIP PAGE STYLES
+   ========================================================================== */
+
+/* --- Obrazki w treści markdown (z .md) --- */
+.trip-content img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 1.5rem auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+
+/* --- Główne zdjęcie wycieczki (cover) --- */
 .trip-cover img {
   max-width: 100%;
   height: auto;
@@ -13,6 +22,7 @@
   aspect-ratio: 3 / 4;
 }
 
+/* --- Data wycieczki --- */
 .trip-date {
   margin-top: 2rem;
   text-align: right;
@@ -21,6 +31,19 @@
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+/* ==========================================================================
+   TRIP GALLERY STYLES
+   ========================================================================== */
+
+/* --- Kontener galerii --- */
+.trip-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* --- Karta wycieczki --- */
 .trip-card {
   width: calc(33.333% - 1rem);
   aspect-ratio: 4 / 3;
@@ -31,6 +54,7 @@
   color: inherit;
   transition: transform 0.3s ease;
 
+  /* Obrazek w karcie */
   img {
     width: 100%;
     height: 100%;
@@ -39,6 +63,7 @@
     transition: filter 0.3s ease;
   }
 
+  /* Nakładka z tytułem */
   .trip-caption {
     position: absolute;
     top: 0;
@@ -59,6 +84,7 @@
     pointer-events: none;
   }
 
+  /* Efekt hover */
   &:hover {
     transform: scale(1.03);
 
