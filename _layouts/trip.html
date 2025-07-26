@@ -1,21 +1,27 @@
 ---
 layout: default
 ---
-<article class="trip page-wrapper">
-  <h1 class="page-title">{{ page.title }}</h1>
 
-  <div class="trip-cover">
-    {% assign image = page.cover_image | default: "trips__placeholder.jpg" %}
-    <img src="/assets/images/trips/{{ image }}" alt="{{ page.title }}">
-  </div>
+<main class="page-wrapper">
+  <article class="trip">
+    <h1 class="page-title">{{ page.title }}</h1>
 
-  <div class="trip-content">
-    {{ content }}
-  </div>
+    {% if page.cover_image %}
+    <div class="trip-cover">
+      <img src="/assets/images/trips/{{ page.cover_image }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
 
-  <p class="trip-date">{{ page.date | date: "%d %B %Y" }}</p>
+    <div class="trip-content">
+      {{ content }}
+    </div>
 
-  <div class="button-center">
-    <a class="button subtle" href="/off-the-trail/">All excursions</a>
-  </div>
-</article>
+    {% if page.date %}
+      <p class="trip-date">{{ page.date | date: "%d %B %Y" }}</p>
+    {% endif %}
+
+    <div class="button-center">
+      <a class="button subtle" href="/off-the-trail/">All excursions</a>
+    </div>
+  </article>
+</main>
