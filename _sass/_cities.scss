@@ -124,7 +124,7 @@
     color: inherit;
     transition: box-shadow 0.3s ease; /* Bezpośrednia wartość zamiast zmiennej $transition-speed */
     align-items: stretch;
-    max-height: 220px;
+    height: auto;
 
     &:hover {
         box-shadow: 0 8px 24px rgba(0,0,0,0.08);
@@ -183,7 +183,8 @@
 /* Mobile layout: jedna kolumna */
 @media (max-width: 768px) { /* Bezpośrednia wartość zamiast zmiennej $breakpoint-tablet */
     .city-note-grid {
-        grid-template-columns: 1fr;
+          display: flex;
+          flex-direction: column;
     }
 
     .city-note-card {
