@@ -1,3 +1,31 @@
+:root {
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  --color-primary: #007bff; /* Przykładowy kolor */
+  --color-secondary: #6c757d; /* Przykładowy kolor */
+  --color-text-dark: #343a40; /* Przykładowy kolor */
+  --color-text-secondary: #444; /* Przykładowy kolor, odpowiada #444 z Twojego kodu */
+  --color-background-accent: #f8f9fa; /* Przykładowy kolor, odpowiada #fff z Twojego kodu */
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08); /* Odpowiada twojemu box-shadow: 0 8px 24px rgba(0,0,0,0.08); */
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --font-family-base: sans-serif; /* Domyślna czcionka */
+  --font-ibm-plex: "IBM Plex Sans", sans-serif; /* Jeśli chcesz używać konkretnie tej czcionki */
+}
+
 /* ==========================================================================
    BASE STYLES
    ========================================================================== */
