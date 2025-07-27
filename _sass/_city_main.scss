@@ -122,11 +122,10 @@
   }
 }
 
----
 
-## Responsywność
-
-```scss
+/* ==========================================================================
+   Responsywność
+   ========================================================================== */
 /* Przełączamy się na układ poziomy dla ekranów większych niż 768px */
 @media (min-width: 769px) {
   .city-note-grid {
