@@ -1,7 +1,7 @@
 ---
 layout: note
 title: The Rise of Ubiquitous Surveillance
-date: 2025-07-16
+date: 2025-07-09
 tags: [ai, surveillance]
 slug: always-watching
 ---
