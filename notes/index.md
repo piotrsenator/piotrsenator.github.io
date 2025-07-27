@@ -3,10 +3,8 @@ layout: default
 title: Notes
 permalink: /notes/
 ---
-
 <section class="note-wrapper page-wrapper">
   <h1 class="page-title">Notes</h1>
-
   <div class="note-grid">
     {% for note in site.notes %}
       <a href="{{ note.url }}" class="note-tile">
