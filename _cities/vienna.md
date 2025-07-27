@@ -1,9 +1,7 @@
 ---
 layout: city
 title: Vienna
-slug: vienna
 ---
-
 <main class="page-wrapper city-page">
   <article>
     <section>
@@ -25,9 +23,5 @@ slug: vienna
         </ul>
       {% endfor %}
     </section>
-
-    <div class="button-center" style="margin-top: 2rem;">
-      <a class="button subtle" href="/my-cities/">← Back to cities</a>
-    </div>
   </article>
 </main>
