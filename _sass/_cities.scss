@@ -130,6 +130,8 @@
   color: inherit;
   transition: box-shadow 0.3s ease;
   align-items: stretch;
+  max-height: 220px; 
+
 }
 
 .city-note-card:hover {
@@ -179,7 +181,7 @@
 .city-note-card.no-image .text-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
   padding: 1.5rem;
