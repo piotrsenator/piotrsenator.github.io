@@ -56,15 +56,25 @@
 
 /* --- Style dla treści notatki (akapity w .page-content) --- */
 .page-content p {
-  margin-bottom: 1.5rem; /* Przerwa między akapitami */
-  text-indent: 1.5rem;   /* Wcięcie pierwszego wiersza akapitu */
-  line-height: 1.6;      /* Możesz też nieco zwiększyć interlinię dla lepszej czytelności */
+  margin-bottom: 1rem;   /* Zmniejsz odstęp pod akapitem, np. do 1rem (lub 1.25rem) */
+  text-indent: 1.5rem;   /* Ujednolicone wcięcie pierwszego wiersza */
+  line-height: 1.6;      /* Dobra interlinię dla czytelności */
 }
 
-/* Możesz też zresetować wcięcie dla pierwszego akapitu, jeśli chcesz, aby tylko kolejne miały wcięcie.
-   To jest opcjonalne i zależy od preferencji. */
+/* Usuń wcięcie dla pierwszego akapitu, aby tekst zaczynał się równo */
 .page-content p:first-of-type {
   text-indent: 0;
+}
+
+.page-content p:first-of-type::first-letter {
+  float: left; /* Sprawia, że litera "opada" i tekst ją opływa */
+  font-size: 4rem; /* Duży rozmiar, np. 2-3 razy większy niż normalny tekst */
+  line-height: 1; /* Ważne, żeby nie zaburzyć interlinii tekstu obok */
+  font-family: "Syne", sans-serif; /* Użyj innej, kontrastowej czcionki, np. tej od nagłówków */
+  color: #1F3D2D; /* Kolor pasujący do palety Twojej strony (np. ciemna zieleń z nagłówka) */
+  margin-right: 0.15em; /* Mały odstęp od tekstu, który ją opływa */
+  padding-top: 0.05em; /* Czasem trzeba skorygować pionowe położenie */
+  font-weight: 700; /* Pogrubienie */
 }
 
 /* --- Obrazek nagłówkowy pojedynczej notatki --- */
