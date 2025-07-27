@@ -2,7 +2,6 @@
 title: Strolling the Ringstrasse
 date: 2025-07-05
 category: walks
-cover_image: vienna_walks_01.jpg
 tags: [walks, architecture]
 city: vienna
 ---
