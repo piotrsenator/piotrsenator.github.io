@@ -49,77 +49,74 @@
   font-size: 1.5rem;
   font-weight: 600;
   font-family: "IBM Plex Sans", sans-serif;
-  color: transparent;
-  background-color: rgba(255, 255, 255, 0); /* transparent initially */
+  color: transparent; /* Domyślnie niewidoczny */
+  background-color: rgba(255, 255, 255, 0); /* Domyślnie przezroczyste tło */
   user-select: none;
   pointer-events: none;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Duże ekrany – efekt hover (TYLKO na urządzeniach z myszką/precyzyjnym wskaźnikiem) */
-@media (min-width: 768px) and (pointer: fine) and (hover: hover) {
+
+/* --- Duże ekrany (lub komputery z myszką, niezależnie od szerokości > 0) – efekt hover --- */
+/* Ten blok stylów aktywuje efekt hover i przyciemnianie obrazka */
+/* Będzie działać na każdym urządzeniu z myszką (pointer: fine, hover: hover) */
+/* Nawet jeśli okno przeglądarki jest wąskie, jeśli jest to komputer, hover zadziała */
+@media (pointer: fine) and (hover: hover) {
   .city-tiles a.city-note-tile:hover img,
   .city-tiles a.city-note-tile:focus-visible img {
-    filter: brightness(0.5);
+    filter: brightness(0.5); /* Przyciemnij na hover */
   }
 
   .city-tiles a.city-note-tile:hover span,
   .city-tiles a.city-note-tile:focus-visible span {
-    background-color: rgba(255, 255, 255, 0.85);
-    color: #224422;
+    background-color: rgba(255, 255, 255, 0.85); /* Białe tło na hover */
+    color: #224422; /* Zielony tekst na hover */
   }
 }
 
-/* Małe ekrany LUB urządzenia dotykowe – napis widoczny zawsze */
-@media (max-width: 767px), (pointer: coarse), (hover: none) {
-
-  /* Ten blok stylów dotyczy WĄSKICH EKRANÓW */
-  /* Jeśli ekran jest <= 767px, kafelki są w 1 kolumnie i mają 100% szerokości */
-  @media (max-width: 767px) {
-    .city-tiles {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .city-tiles a.city-note-tile {
-      max-width: 100%;
-      height: 200px; /* ustalona wysokość dla proporcji */
-      border-radius: 0;
-    }
+/* --- Małe ekrany (telefony) – układ w jednej kolumnie, zawsze widoczny napis --- */
+/* Ten blok stylów aktywuje się TYLKO na wąskich ekranach */
+@media (max-width: 767px) {
+  .city-tiles {
+    grid-template-columns: 1fr; /* Kafelki jeden pod drugim */
+    gap: 1rem;
   }
 
-  /* Ten blok stylów dotyczy WSZYSTKICH URZĄDZEŃ DOTYKOWYCH lub bez hovera */
-  /* Niezależnie od szerokości ekranu, na iPadzie/telefonie napis jest zawsze widoczny */
+  .city-tiles a.city-note-tile {
+    max-width: 100%; /* Kafelek zajmuje całą szerokość */
+    height: 200px;
+    border-radius: 0;
+  }
+
   .city-tiles a.city-note-tile img {
-    filter: brightness(0.5); /* Obrazek zawsze przyciemniony na dotykowych/małych */
+    filter: brightness(0.5); /* Obrazek zawsze przyciemniony */
   }
 
   .city-tiles a.city-note-tile span {
     background-color: transparent; /* Brak tła, tylko cień tekstu */
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    color: #ffffff; /* Biały tekst */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); /* Cieñ dla czytelności */
     font-size: 2rem;
     font-weight: 700;
   }
 }
 
-    /* wybielone tło
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #224422; */
+/* --- Urządzenia dotykowe (iPad, smartfony) – napis widoczny zawsze, niezależnie od szerokości --- */
+/* Ten blok stylów aktywuje się TYLKO na urządzeniach dotykowych, niezależnie od szerokości ekranu */
+/* Nadpisze style hover z poprzedniego bloku, jeśli urządzenie jest dotykowe */
+@media (pointer: coarse), (hover: none) {
+    .city-tiles a.city-note-tile img {
+        filter: brightness(0.5); /* Obrazek zawsze przyciemniony */
+    }
 
-    /* mniejsza przezroczystość
-    background-color: rgba(255, 255, 255, 0.6); // mniej białe
-    color: #224422;*/
-
-    /* ciemna półprzezroczysta warstwa zamiast białej
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #ffffff;*/
-     
-    /* brak tła, tylko cienisty tekst*/
-    /* background-color: transparent;
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); // cień poprawiający czytelność
-   */
+    .city-tiles a.city-note-tile span {
+        background-color: transparent; /* Brak tła, tylko cieñ tekstu */
+        color: #ffffff; /* Biały tekst */
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); /* Cieñ dla czytelności */
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
 
 /* ==========================================================================
    STRONA POJEDYNCZEJ NOTATKI MIEJSCA (city note page)
