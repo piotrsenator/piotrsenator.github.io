@@ -107,6 +107,90 @@
 }
 
 /* ==========================================================================
+   STRONA MIASTA
+   ========================================================================== */
+
+
+.city-note-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.city-note-card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #fff;
+  color: inherit;
+  transition: box-shadow 0.3s ease;
+}
+
+.city-note-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.city-note-card .image-wrapper {
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.city-note-card .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.city-note-card .text-wrapper {
+  padding: 1rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.city-note-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.city-note-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Mobile layout: jedna kolumna */
+@media (max-width: 768px) {
+  .city-note-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-note-card {
+    flex-direction: column;
+  }
+
+  .city-note-card .image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .city-note-card .text-wrapper {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================================
    STRONA POJEDYNCZEJ NOTATKI MIEJSCA (city note page)
    ========================================================================== */
 
