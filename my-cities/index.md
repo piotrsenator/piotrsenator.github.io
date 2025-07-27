@@ -6,7 +6,7 @@ permalink: /my-cities/
 
 <section class="page-wrapper">
   <h1 class="page-title">My Cities</h1>
-  <p>These are the cities that shaped me — places where I left a part of my heart and where I feel at home.</p>
+  <p>Holidays are often about going somewhere new—seeking change, difference, and surprise. But the cities we live in, where we get stuck in traffic, complain about the weather, or wrestle with local bureaucracy, shape us just as deeply. Sometimes all it takes is to look up and see that the place we call home still has the power to surprise us. These are the cities that have shaped me. I have lived in each of them, and I know I will keep coming back.</p>
 
   <div class="city-tiles">
     <a href="/cities/vienna/" class="city-note-tile">
