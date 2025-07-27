@@ -18,7 +18,7 @@ title: Vienna
       
       {% if note.cover_image %}
       <div class="image-wrapper">
-        <img src="/assets/images/{{ note.cover_image }}" alt="{{ note.title }}">
+        <img src="/assets/images/cities/{{ note.city }}/{{ note.cover_image }}" alt="{{ note.title }}">
       </div>
       {% endif %}
 
