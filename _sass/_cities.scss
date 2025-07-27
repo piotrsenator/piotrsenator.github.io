@@ -1,7 +1,6 @@
 /* ==========================================================================
    MIASTA – KAFELKI Z MIEJSCAMI (city notes)
    ========================================================================== */
-
 .city-tiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -54,7 +53,6 @@
   pointer-events: none;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
-
 
 /* --- Duże ekrany (lub komputery z myszką, niezależnie od szerokości > 0) – efekt hover --- */
 @media (pointer: fine) and (hover: hover) {
