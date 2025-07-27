@@ -74,7 +74,7 @@
   }
 }
 
-/* --- Małe ekrany (telefony) – układ w jednej kolumnie, zawsze widoczny napis --- */
+/* --- Małe ekrany – układ w jednej kolumnie --- */
 /* Ten blok stylów aktywuje się TYLKO na wąskich ekranach */
 @media (max-width: 767px) {
   .city-tiles {
@@ -86,18 +86,6 @@
     max-width: 100%; /* Kafelek zajmuje całą szerokość */
     height: 200px;
     border-radius: 0;
-  }
-
-  .city-tiles a.city-note-tile img {
-    filter: brightness(0.7); /* Obrazek zawsze przyciemniony */
-  }
-
-  .city-tiles a.city-note-tile span {
-    background-color: transparent; /* Brak tła, tylko cień tekstu */
-    color: #ffffff; /* Biały tekst */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); /* Cieñ dla czytelności */
-    font-size: 2rem;
-    font-weight: 700;
   }
 }
 
