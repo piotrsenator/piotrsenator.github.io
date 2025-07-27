@@ -2,7 +2,6 @@
 title: Café Central on a Monday Morning
 date: 2025-07-01
 category: food
-cover_image: vienna_food_01.jpg
 tags: [food, cafés]
 city: vienna
 ---
