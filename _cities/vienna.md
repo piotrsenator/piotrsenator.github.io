@@ -38,10 +38,7 @@ slug: vienna
                       {% if note.excerpt %}
                           <p class="city-note-card__excerpt">{{ note.excerpt | strip_html }}</p>
                       {% else %}
-<p class="city-note-card__excerpt">
-  {{ note.excerpt | default: note.content | markdownify | strip_html | truncatewords: 15, "..." }}
-</p>
-
+                          <p class="city-note-card__excerpt">{{ note.content | markdownify | strip_html | truncatewords: 15, "..." }}</p>
                       {% endif %}
                   </div>
                 </a>
