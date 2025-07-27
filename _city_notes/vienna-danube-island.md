@@ -2,7 +2,7 @@
 title: Day Trip to Danube Island
 date: 2025-07-15
 category: trips
-cover_image: vienna_trips_01.jpg
+cover_image: donauinsel.jpg
 tags: [outings, nature]
 city: vienna
 ---
