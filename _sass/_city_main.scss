@@ -23,7 +23,7 @@
 }
 
 .category-section {
-    margin-bottom: var(--spacing-xl); // Odstęp między kategoriami
+    margin-bottom: var(--spacing-xl);
 }
 
 .category-section__title {
@@ -34,36 +34,36 @@
 
 .city-note-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Dwukolumnowa siatka z elastycznym dopasowaniem */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Domyślnie min. szerokość 280px */
   gap: var(--spacing-md);
   max-width: 1200px;
-  margin: 0 auto var(--spacing-lg) auto; /* Centrowanie i odstęp od dołu siatki */
+  margin: 0 auto var(--spacing-lg) auto;
   padding: 0 var(--spacing-sm);
   box-sizing: border-box;
 }
 
 .city-note-card {
   display: flex;
-  flex-direction: column; /* Zmieniamy na kolumnowy układ dla lepszego wyglądu w siatce */
+  flex-direction: column; /* Domyślnie KOLUMNOWY układ (obrazek na górze) */
   background-color: var(--color-background-accent);
   border: 1px solid var(--color-secondary);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-md);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none; /* Usuwamy podkreślenie z linku */
-  color: inherit; /* Dziedziczymy kolor tekstu */
-  height: 100%; /* Ważne dla wyrównania kart w siatce */
+  text-decoration: none;
+  color: inherit;
+  padding: var(--spacing-sm); /* Domyślny padding dla układu kolumnowego */
 }
 
 .city-note-card:hover {
-  transform: translateY(-5px); /* Efekt uniesienia przy najechaniu */
+  transform: translateY(-5px); /* Efekt uniesienia */
   box-shadow: var(--shadow-lg);
 }
 
 .city-note-card__image-wrapper {
   flex-shrink: 0;
-  width: 100%; /* Obrazek na całą szerokość karty */
-  height: 200px; /* Stała wysokość dla obrazka */
+  width: 100%; /* Domyślnie obrazek na całą szerokość */
+  height: 200px; /* Domyślna wysokość obrazka */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +74,7 @@
 }
 
 .city-note-card__image-wrapper--placeholder {
-  background-color: var(--color-tertiary); /* Inny kolor dla placeholderu */
+  background-color: var(--color-tertiary);
 }
 
 .city-note-card__image {
@@ -85,58 +85,84 @@
 }
 
 .city-note-card__content {
-  padding: var(--spacing-md);
+  padding: var(--spacing-md) 0 0 0; /* Padding na górze dla treści pod obrazkiem */
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Pozwala treści rozciągać się */
+  flex-grow: 1;
 }
 
 .city-note-card__title {
   font-size: 1.8rem;
-  margin-bottom: var(--spacing-xs);
-  color: var(--color-primary); /* Kolor tytułu linku */
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--color-primary);
   line-height: 1.2;
 }
 
 .city-note-card__title:hover {
-    color: var(--color-text-dark); /* Zmiana koloru tytułu przy najechaniu */
+    color: var(--color-text-dark);
 }
 
 .city-note-card__excerpt {
   font-weight: var(--font-weight-light);
   font-size: 1rem;
   margin-bottom: var(--spacing-md);
-  flex-grow: 1; /* Pozwala skrótowi rozciągać się */
+  flex-grow: 1;
   color: var(--color-text-secondary);
 }
 
 /* Styl dla kart bez obrazka */
 .city-note-card.no-image {
-  flex-direction: column; /* Utrzymujemy kolumnowy układ */
+  /* Dla kart bez obrazka, niezależnie od rozmiaru ekranu, zawsze w układzie kolumnowym */
+  flex-direction: column;
   .city-note-card__image-wrapper {
-    display: none; /* Ukrywamy wrapper obrazka */
+    display: none;
   }
   .city-note-card__content {
-    padding: var(--spacing-md); /* Upewniamy się, że padding jest poprawny */
+    padding: var(--spacing-md); /* Pełny padding, gdy obrazka nie ma */
   }
 }
 
+---
 
-/* Responsywność */
-@media (max-width: 768px) {
+## Responsywność
+
+```scss
+/* Przełączamy się na układ poziomy dla ekranów większych niż 768px */
+@media (min-width: 769px) {
   .city-note-grid {
-    grid-template-columns: 1fr; /* Jedna kolumna na mniejszych ekranach */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Może być dwie lub więcej kolumn */
+  }
+
+  .city-note-card {
+    flex-direction: row; /* Układ POZIOMY (obrazek po lewej) */
+    gap: var(--spacing-md); /* Odstęp między obrazkiem a tekstem */
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    padding: var(--spacing-sm) var(--spacing-md); /* Padding dla układu poziomego */
   }
 
   .city-note-card__image-wrapper {
-    height: 180px; /* Mniejsza wysokość obrazka na urządzeniach mobilnych */
+    width: 120px; /* Kwadratowy obrazek */
+    height: 120px;
+    border-radius: var(--border-radius-sm); /* Mniejsze zaokrąglenie dla kwadratu */
   }
 
-  .city-note-card__title {
-      font-size: 1.6rem;
+  .city-note-card__content {
+    padding: 0; /* Brak paddingu na górze, gdy obrazek jest z boku */
+  }
+
+  /* Karta bez obrazka pozostaje pionowa */
+  .city-note-card.no-image {
+    flex-direction: column; /* Utrzymujemy kolumnowy układ dla kart bez obrazka */
+    .city-note-card__image-wrapper {
+      display: none;
+    }
+    .city-note-card__content {
+      padding: var(--spacing-md);
+    }
   }
 }
 
+/* Dostosowania dla jeszcze mniejszych ekranów, jeśli potrzebne */
 @media (max-width: 480px) {
     .city-page__title {
         font-size: 2.5rem;
