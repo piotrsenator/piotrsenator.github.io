@@ -57,14 +57,21 @@
 .city-note-card__image-wrapper {
   flex-shrink: 0;
   width: 100%; /* Domyślnie obrazek na całą szerokość */
-  height: 200px; /* Domyślna wysokość obrazka */
+  /* height: 200px; Domyślna wysokość obrazka */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   overflow: hidden;
   border-top-left-radius: var(--border-radius-md); /* Zaokrąglamy tylko górne rogi */
   border-top-right-radius: var(--border-radius-md);
   background-color: var(--color-secondary);
+
+  background-size: cover; /* Ważne! Obraz pokryje całe tło */
+  background-position: center; /* Wyśrodkuj obraz */
+  background-repeat: no-repeat; /* Zapobiegaj powtarzaniu */
+  /* Dodaj tymczasową minimalną wysokość, jeśli kontener jest pusty lub nie ma innej zawartości */
+  min-height: 180px; /* Przykład: Ustaw min-height, jeśli nie ma contentu */
+
 }
 
 .city-note-card__image-wrapper--placeholder {
