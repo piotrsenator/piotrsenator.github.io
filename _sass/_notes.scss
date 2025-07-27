@@ -54,6 +54,19 @@
   }
 }
 
+/* --- Style dla treści notatki (akapity w .page-content) --- */
+.page-content p {
+  margin-bottom: 1.5rem; /* Przerwa między akapitami */
+  text-indent: 1.5rem;   /* Wcięcie pierwszego wiersza akapitu */
+  line-height: 1.6;      /* Możesz też nieco zwiększyć interlinię dla lepszej czytelności */
+}
+
+/* Możesz też zresetować wcięcie dla pierwszego akapitu, jeśli chcesz, aby tylko kolejne miały wcięcie.
+   To jest opcjonalne i zależy od preferencji. */
+.page-content p:first-of-type {
+  text-indent: 0;
+}
+
 /* --- Obrazek nagłówkowy pojedynczej notatki --- */
 .note-cover {
   max-width: 75%;
