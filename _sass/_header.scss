@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 1rem;
+  padding: 1rem 1rem;
   border-bottom: 1px solid #eee;
   margin-bottom: 2rem;
   max-width: 1200px;
@@ -27,6 +27,7 @@
   text-decoration: none;
   color: #d4e8d4; /* jasnozielony domyślny kolor */
   transition: color 0.3s ease;
+  font-size: 1.15rem;
 }
 
 .main-nav a:hover,
