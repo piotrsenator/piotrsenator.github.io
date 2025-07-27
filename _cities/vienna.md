@@ -7,7 +7,7 @@ slug: vienna
   <article>
     <header class="city-page__header">
         <h1 class="city-page__title">{{ page.title }}</h1>
-        <p class="city-page__description">
+        <p>
             Tutaj znajdziesz wszystkie moje przemyślenia, wskazówki i krótkie wpisy dotyczące {{ page.title }}.
         </p>
     </header>
