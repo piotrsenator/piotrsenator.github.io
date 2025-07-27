@@ -12,8 +12,8 @@
 
 .city-tiles a.city-note-tile {
   position: relative;
-  max-width: 220px;
-  aspect-ratio: 1 / 1;
+  height: 180px;
+  /* aspect-ratio: 1 / 1; */
   overflow: hidden;
   border: 1px solid #ccc;
   border-radius: 0px; /*zmieniony z 4 */
