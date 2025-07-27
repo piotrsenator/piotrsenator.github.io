@@ -1,5 +1,7 @@
 ---
-layout: city
+title: Testing truncating
+date: 2025-07-27
+category: food
 city: vienna
 ---
 raz dwa trzy cztery pięć sześć siedem osiem dziewięć dziesięć eleven twelve thirteen fourteen fifteed tulip car knife fork.
