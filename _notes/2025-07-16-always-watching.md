@@ -1,6 +1,6 @@
 ---
 layout: note
-title: Always Watching: The Rise of Surveillance
+title: Always Watching - The Rise of Surveillance
 date: 2025-07-16
 tags: [ai, surveillance]
 slug: last-book
