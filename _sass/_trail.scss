@@ -1,7 +1,10 @@
 /* ==========================================================================
    TRIP PAGE STYLES
    ========================================================================== */
-
+/* --- Stylizacja akapitów w treści wycieczki --- */
+.trip-content p {
+  margin-bottom: 1rem; /* Możesz dostosować tę wartość */
+}
 /* --- Obrazki w treści markdown (z .md) --- */
 .trip-content img {
   display: block;
