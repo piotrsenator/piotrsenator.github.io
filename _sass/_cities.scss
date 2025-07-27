@@ -181,23 +181,26 @@
 }
 
 /* Mobile layout: jedna kolumna */
-@media (max-width: 768px) { /* Bezpośrednia wartość zamiast zmiennej $breakpoint-tablet */
-    .city-note-grid {
-          display: flex;
-          flex-direction: column;
+@media (max-width: 768px) {
+  .city-note-grid {
+    grid-template-columns: 1fr; // Zmieniamy tylko układ kolumn
+  }
+
+  .city-note-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    .image-wrapper {
+      width: 100%;
+      aspect-ratio: 1 / 1;
     }
 
-    .city-note-card {
-        .image-wrapper {
-            width: 100%;
-            aspect-ratio: 1 / 1; /* Bezpośrednia wartość zamiast mixinu @include square-aspect-ratio */
-        }
-
-        .text-wrapper {
-            width: 100%;
-        }
+    .text-wrapper {
+      width: 100%;
     }
+  }
 }
+
 
 /* ==========================================================================
    STRONA POJEDYNCZEJ NOTATKI MIEJSCA (city note page)
