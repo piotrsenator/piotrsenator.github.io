@@ -1,215 +1,220 @@
 /* ==========================================================================
-   MIASTA – KAFELKI Z MIEJSCAMI (city notes)
-   ========================================================================== */
+   MIASTA – KAFELKI Z MIEJSCAMI (city notes)
+   ========================================================================== */
+
 .city-tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.25rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.25rem; /* Bezpośrednia wartość zamiast zmiennej $gap-medium */
+    justify-content: center;
+    margin-top: 1.5rem;
 
-.city-tiles a.city-note-tile {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  border-radius: 0;
-  text-decoration: none;
-  color: inherit;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  margin: 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    a.city-note-tile {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #ccc; /* Bezpośrednia wartość zamiast zmiennej $color-light-gray */
+        border-radius: 0; /* Bezpośrednia wartość zamiast zmiennej $border-radius-none */
+        text-decoration: none;
+        color: inherit;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        margin: 0 auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Bezpośrednie wartości zamiast zmiennej $transition-speed */
+        aspect-ratio: 1 / 1; /* Bezpośrednia wartość zamiast mixinu @include square-aspect-ratio */
 
-/* Pozostała część stylów dla .city-tiles a.city-note-tile pozostaje bez zmian */
-.city-tiles a.city-note-tile:hover,
-.city-tiles a.city-note-tile:focus-visible {
-  transform: scale(1.04);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  outline: none;
-}
+        &:hover,
+        &:focus-visible {
+            transform: scale(1.04);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
 
-.city-tiles a.city-note-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: filter 0.3s ease;
-}
+        img {
+            width: 100%; /* Bezpośrednie wartości zamiast mixinu @include cover-image */
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: filter 0.3s ease; /* Bezpośrednia wartość zamiast zmiennej $transition-speed */
+        }
 
-.city-tiles a.city-note-tile span {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: "IBM Plex Sans", sans-serif;
-  color: transparent;
-  background-color: rgba(255, 255, 255, 0);
-  user-select: none;
-  pointer-events: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+        span {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-family: "IBM Plex Sans", sans-serif; /* Bezpośrednia wartość zamiast zmiennej $font-ibm-plex */
+            color: transparent;
+            background-color: rgba(255, 255, 255, 0);
+            user-select: none;
+            pointer-events: none;
+            transition: color 0.3s ease, background-color 0.3s ease; /* Bezpośrednie wartości zamiast zmiennej $transition-speed */
+        }
+    }
 }
 
 /* --- Duże ekrany (lub komputery z myszką, niezależnie od szerokości > 0) – efekt hover --- */
 @media (pointer: fine) and (hover: hover) {
-  .city-tiles a.city-note-tile:hover img,
-  .city-tiles a.city-note-tile:focus-visible img {
-    filter: brightness(0.4);
-  }
+    .city-tiles a.city-note-tile {
+        &:hover img,
+        &:focus-visible img {
+            filter: brightness(0.4);
+        }
 
-  .city-tiles a.city-note-tile:hover span,
-  .city-tiles a.city-note-tile:focus-visible span {
-    background-color: rgba(255, 255, 255, 0.85);
-    color: #224422;
-  }
+        &:hover span,
+        &:focus-visible span {
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #224422;
+        }
+    }
 }
 
 /* --- Małe ekrany – układ w jednej kolumnie --- */
-@media (max-width: 767px) {
-  .city-tiles {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+@media (max-width: 767px) { /* Bezpośrednia wartość zamiast zmiennej $breakpoint-mobile */
+    .city-tiles {
+        grid-template-columns: 1fr;
+        gap: 1rem; /* Bezpośrednia wartość zamiast zmiennej $gap-small */
 
-  .city-tiles a.city-note-tile {
-    max-width: 100%;
-    /* Usuń stałą wysokość i zamiast tego użyj aspect-ratio, aby zachować kwadratowy kształt */
-    aspect-ratio: 1 / 1;
-    /* height: 200px; <-- Tę linię można usunąć/zastąpić aspect-ratio */
-    border-radius: 0;
-  }
+        a.city-note-tile {
+            max-width: 100%;
+            /* `aspect-ratio: 1 / 1;` jest już zdefiniowane globalnie w `a.city-note-tile`, więc nie trzeba powtarzać */
+            border-radius: 0; /* Bezpośrednia wartość zamiast zmiennej $border-radius-none */
+        }
+    }
 }
 
 /* --- Urządzenia dotykowe (iPad, smartfony) – napis widoczny zawsze, niezależnie od szerokości --- */
 @media (pointer: coarse), (hover: none) {
-    .city-tiles a.city-note-tile img {
-        filter: brightness(0.7);
-    }
+    .city-tiles a.city-note-tile {
+        img {
+            filter: brightness(0.7);
+        }
 
-    .city-tiles a.city-note-tile span {
-        background-color: transparent;
-        color: #ffffff;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-        font-size: 2rem;
-        font-weight: 700;
-    }
+        span {
+            background-color: transparent;
+            color: #ffffff; /* Bezpośrednia wartość zamiast zmiennej $color-light */
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
 }
 
+---
 
 /* ==========================================================================
    STRONA MIASTA
    ========================================================================== */
 
-
 .city-note-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem; /* Bezpośrednia wartość zamiast zmiennej $gap-large */
+    margin-bottom: 3rem;
 }
 
 .city-note-card {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 0;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  overflow: hidden;
-  text-decoration: none;
-  background: #fff;
-  color: inherit;
-  transition: box-shadow 0.3s ease;
-  align-items: stretch;
-  max-height: 220px; 
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 0; /* Bezpośrednia wartość zamiast zmiennej $border-radius-none */
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Bezpośrednia wartość zamiast zmiennej $border-radius-small */
+    overflow: hidden;
+    text-decoration: none;
+    background: #fff; /* Bezpośrednia wartość zamiast zmiennej $color-light */
+    color: inherit;
+    transition: box-shadow 0.3s ease; /* Bezpośrednia wartość zamiast zmiennej $transition-speed */
+    align-items: stretch;
+    max-height: 220px;
 
-}
+    &:hover {
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
 
-.city-note-card:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
+    .image-wrapper {
+        aspect-ratio: 1 / 1; /* Bezpośrednia wartość zamiast mixinu @include square-aspect-ratio */
+        position: relative;
+        overflow: hidden;
+        background-color: #eee;
 
-.city-note-card .image-wrapper {
-  aspect-ratio: 1 / 1;
-  position: relative;
-  overflow: hidden;
-  background-color: #eee;
-}
+        img {
+            position: absolute;
+            inset: 0;
+            width: 100%; /* Bezpośrednie wartości zamiast mixinu @include cover-image */
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
 
-.city-note-card .image-wrapper img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    .text-wrapper {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-.city-note-card .text-wrapper {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        font-family: "IBM Plex Sans", sans-serif; /* Bezpośrednia wartość zamiast zmiennej $font-ibm-plex */
+    }
 
-.city-note-card h4 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  font-family: "IBM Plex Sans", sans-serif;
-}
+    p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #444; /* Bezpośrednia wartość zamiast zmiennej $color-medium-dark */
+    }
 
-.city-note-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #444;
-}
+    &.no-image {
+        grid-template-columns: 1fr;
 
-.city-note-card.no-image {
-  grid-template-columns: 1fr;
-}
-
-.city-note-card.no-image .text-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  padding: 1.5rem;
+        .text-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            padding: 1.5rem;
+        }
+    }
 }
 
 /* Mobile layout: jedna kolumna */
-@media (max-width: 768px) {
-  .city-note-grid {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 768px) { /* Bezpośrednia wartość zamiast zmiennej $breakpoint-tablet */
+    .city-note-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .city-note-card .image-wrapper {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-  }
+    .city-note-card {
+        .image-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Bezpośrednia wartość zamiast mixinu @include square-aspect-ratio */
+        }
 
-  .city-note-card .text-wrapper {
-    width: 100%;
-  }
+        .text-wrapper {
+            width: 100%;
+        }
+    }
 }
 
+---
 
 /* ==========================================================================
    STRONA POJEDYNCZEJ NOTATKI MIEJSCA (city note page)
    ========================================================================== */
 
 .city-note-page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem; /* Bezpośrednia wartość zamiast zmiennej $gap-large */
 }
 
 .city-note .page-title {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 700;
-  margin-bottom: 1rem;
+    font-family: "IBM Plex Sans", sans-serif; /* Bezpośrednia wartość zamiast zmiennej $font-ibm-plex */
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
