@@ -70,19 +70,26 @@
   }
 }
 
-/* Małe ekrany I/LUB urządzenia dotykowe – napis widoczny zawsze */
+/* Małe ekrany LUB urządzenia dotykowe – napis widoczny zawsze */
 @media (max-width: 767px), (pointer: coarse), (hover: none) {
-  .city-tiles {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+
+  /* Ten blok stylów dotyczy WĄSKICH EKRANÓW */
+  /* Jeśli ekran jest <= 767px, kafelki są w 1 kolumnie i mają 100% szerokości */
+  @media (max-width: 767px) {
+    .city-tiles {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .city-tiles a.city-note-tile {
+      max-width: 100%;
+      height: 200px; /* ustalona wysokość dla proporcji */
+      border-radius: 0;
+    }
   }
 
-  .city-tiles a.city-note-tile {
-    max-width: 100%;
-    height: 200px; /* ustalona wysokość dla proporcji */
-    border-radius: 0;
-  }
-
+  /* Ten blok stylów dotyczy WSZYSTKICH URZĄDZEŃ DOTYKOWYCH lub bez hovera */
+  /* Niezależnie od szerokości ekranu, na iPadzie/telefonie napis jest zawsze widoczny */
   .city-tiles a.city-note-tile img {
     filter: brightness(0.5); /* Obrazek zawsze przyciemniony na dotykowych/małych */
   }
@@ -91,7 +98,6 @@
     background-color: transparent; /* Brak tła, tylko cień tekstu */
     color: #ffffff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-
     font-size: 2rem;
     font-weight: 700;
   }
