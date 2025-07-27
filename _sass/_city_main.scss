@@ -92,10 +92,11 @@
 }
 
 .city-note-card__title {
-  font-size: 1.8rem;
-  margin: 0 0 var(--spacing-xs) 0;
-  color: var(--color-primary);
-  line-height: 1.2;
+  font-size: 1.25rem; /* Changed from 1.8rem */
+  font-family: "IBM Plex Sans", sans-serif; /* Added this line */
+  font-weight: 600; /* Ensured this is 600 */
+  margin: 0 0 0.75rem 0; /* Changed from var(--spacing-xs) to 0.75rem to match */
+  color: inherit; /* Changed from var(--color-primary) to inherit to match default text color */
 }
 
 .city-note-card__title:hover {
