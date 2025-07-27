@@ -2,7 +2,7 @@
 title: Discovering Vienna’s Arts District
 date: 2025-07-10
 category: culture
-cover_image: vienna_culture_01.jpg
+cover_image: mq.jpg
 tags: [arts, heritage, museums]
 city: vienna
 ---
