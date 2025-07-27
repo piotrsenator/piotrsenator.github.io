@@ -1,1 +1,49 @@
+/* ==========================================================================
+   404 PAGE
+   ========================================================================== */
 
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+
+.not-found .container {
+  max-width: 600px;
+}
+
+.not-found .title {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-family: 'Spectral SC', serif;
+}
+
+.not-found .subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #6c757d;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.not-found .button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background-color: #254d32; // primary color
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #1f3f28;
+  }
+}
