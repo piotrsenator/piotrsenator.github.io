@@ -8,7 +8,7 @@ title: Piotr Senator
   <section class="home-about-and-cities">
     <section class="home-about">
       <h2>About Me</h2>
-      <p>Strategist, auditor and observer of systems. I draw on diverse disciplines and cities to better understand the world.</p>
+      <p>I'm an auditor with a passion for understanding the world. This page features my travel anecdotes and lessons from cities I've called home.</p>
       <p><a class="button subtle" href="/about/">Read more</a></p>
     </section>
 
