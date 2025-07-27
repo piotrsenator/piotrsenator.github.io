@@ -141,7 +141,6 @@
   position: relative;
   overflow: hidden;
   background-color: #eee;
-  height: 100%; /* to jest kluczowe */
 }
 
 .city-note-card .image-wrapper img {
@@ -155,7 +154,6 @@
 
 .city-note-card .text-wrapper {
   padding: 1rem;
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,14 +172,23 @@
   color: #444;
 }
 
+.city-note-card.no-image {
+  grid-template-columns: 1fr;
+}
+
+.city-note-card.no-image .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
 /* Mobile layout: jedna kolumna */
 @media (max-width: 768px) {
   .city-note-grid {
     grid-template-columns: 1fr;
-  }
-
-  .city-note-card {
-    flex-direction: column;
   }
 
   .city-note-card .image-wrapper {
