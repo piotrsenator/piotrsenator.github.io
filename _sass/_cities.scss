@@ -1,110 +1,109 @@
 /* ==========================================================================
-   MIASTA – KAFELKI Z MIEJSCAMI (city notes)
-   ========================================================================== */
+   MIASTA – KAFELKI Z MIEJSCAMI (city notes)
+   ========================================================================== */
 
 .city-tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.25rem;
-  justify-content: center;
-  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .city-tiles a.city-note-tile {
-  position: relative;
-  height: 180px;
-  /* aspect-ratio: 1 / 1; */
-  overflow: hidden;
-  border: 1px solid #ccc;
-  border-radius: 0px; /*zmieniony z 4 */
-  text-decoration: none;
-  color: inherit;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  margin: 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  /* Zamiast stałej wysokości, użyj aspect-ratio dla kwadratowych kafelków */
+  aspect-ratio: 1 / 1;
+  /* height: 180px;  <-- Tę linię można usunąć, jeśli używasz aspect-ratio */
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Pozostała część stylów dla .city-tiles a.city-note-tile pozostaje bez zmian */
 .city-tiles a.city-note-tile:hover,
 .city-tiles a.city-note-tile:focus-visible {
-  transform: scale(1.04);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  outline: none;
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
 .city-tiles a.city-note-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
 }
 
 .city-tiles a.city-note-tile span {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: "IBM Plex Sans", sans-serif;
-  color: transparent; /* Domyślnie niewidoczny */
-  background-color: rgba(255, 255, 255, 0); /* Domyślnie przezroczyste tło */
-  user-select: none;
-  pointer-events: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: transparent;
+  background-color: rgba(255, 255, 255, 0);
+  user-select: none;
+  pointer-events: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 
 /* --- Duże ekrany (lub komputery z myszką, niezależnie od szerokości > 0) – efekt hover --- */
-/* Ten blok stylów aktywuje efekt hover i przyciemnianie obrazka */
-/* Będzie działać na każdym urządzeniu z myszką (pointer: fine, hover: hover) */
-/* Nawet jeśli okno przeglądarki jest wąskie, jeśli jest to komputer, hover zadziała */
 @media (pointer: fine) and (hover: hover) {
-  .city-tiles a.city-note-tile:hover img,
-  .city-tiles a.city-note-tile:focus-visible img {
-    filter: brightness(0.4); /* Przyciemnij na hover */
-  }
+  .city-tiles a.city-note-tile:hover img,
+  .city-tiles a.city-note-tile:focus-visible img {
+    filter: brightness(0.4);
+  }
 
-  .city-tiles a.city-note-tile:hover span,
-  .city-tiles a.city-note-tile:focus-visible span {
-    background-color: rgba(255, 255, 255, 0.85); /* Białe tło na hover */
-    color: #224422; /* Zielony tekst na hover */
-  }
+  .city-tiles a.city-note-tile:hover span,
+  .city-tiles a.city-note-tile:focus-visible span {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #224422;
+  }
 }
 
 /* --- Małe ekrany – układ w jednej kolumnie --- */
-/* Ten blok stylów aktywuje się TYLKO na wąskich ekranach */
 @media (max-width: 767px) {
-  .city-tiles {
-    grid-template-columns: 1fr; /* Kafelki jeden pod drugim */
-    gap: 1rem;
-  }
+  .city-tiles {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 
-  .city-tiles a.city-note-tile {
-    max-width: 100%; /* Kafelek zajmuje całą szerokość */
-    height: 200px;
-    border-radius: 0;
-  }
+  .city-tiles a.city-note-tile {
+    max-width: 100%;
+    /* Usuń stałą wysokość i zamiast tego użyj aspect-ratio, aby zachować kwadratowy kształt */
+    aspect-ratio: 1 / 1;
+    /* height: 200px; <-- Tę linię można usunąć/zastąpić aspect-ratio */
+    border-radius: 0;
+  }
 }
 
 /* --- Urządzenia dotykowe (iPad, smartfony) – napis widoczny zawsze, niezależnie od szerokości --- */
-/* Ten blok stylów aktywuje się TYLKO na urządzeniach dotykowych, niezależnie od szerokości ekranu */
-/* Nadpisze style hover z poprzedniego bloku, jeśli urządzenie jest dotykowe */
 @media (pointer: coarse), (hover: none) {
-    .city-tiles a.city-note-tile img {
-        filter: brightness(0.7); /* Obrazek zawsze przyciemniony */
-    }
+    .city-tiles a.city-note-tile img {
+        filter: brightness(0.7);
+    }
 
-    .city-tiles a.city-note-tile span {
-        background-color: transparent; /* Brak tła, tylko cieñ tekstu */
-        color: #ffffff; /* Biały tekst */
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); /* Cieñ dla czytelności */
-        font-size: 2rem;
-        font-weight: 700;
-    }
+    .city-tiles a.city-note-tile span {
+        background-color: transparent;
+        color: #ffffff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        font-size: 2rem;
+        font-weight: 700;
+    }
 }
+
 
 /* ==========================================================================
    STRONA MIASTA
