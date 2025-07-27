@@ -7,6 +7,6 @@ Embarking on a cycling adventure from Vienna to Bratislava is a fantastic experi
 ![Bratislava](/assets/images/trips/2025-05-24-bratislava-2.jpg)
 
 After a restful night in Bratislava, the journey continues with a ride to Carnuntum, a significant Roman archaeological park back on the Austrian side. The cycle from Bratislava to Carnuntum is relatively short, around 20-30 kilometers, and again largely follows the Danube, passing through the historic town of Hainburg an der Donau with its impressive medieval fortifications. Carnuntum itself is a highlight, offering a fascinating glimpse into Roman life with reconstructed buildings, a museum, and ongoing excavations, providing a captivating contrast to the natural beauty and modern cities experienced on the previous day's ride.
-![Bratislava](/assets/images/trips/2025-05-24-bratislava-2.jpg)
+![Bratislava](/assets/images/trips/2025-05-24-bratislava-3.jpg)
 
 <iframe src="https://www.komoot.com/tour/2270563441/embed?share_token=a3V6OSio8dD7B6wBNDfwa5BNLfHh3a3TDnqAhYzI9ZYtC1NQby" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
