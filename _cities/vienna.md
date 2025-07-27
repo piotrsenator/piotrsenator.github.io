@@ -1,37 +1,54 @@
 ---
 layout: city
 title: Vienna
+slug: vienna
 ---
 <main class="page-wrapper city-page">
   <article>
-<section>
-  {% assign notes_for_city = site.city_notes | where: "city", page.slug %}
-  {% assign notes_sorted = notes_for_city | sort: "date" | reverse %}
-  {% assign notes_grouped = notes_sorted | group_by: "category" %}
+    <header class="city-page__header">
+        <h1 class="city-page__title">{{ page.title }}</h1>
+        <p class="city-page__description">
+            Tutaj znajdziesz wszystkie moje przemyślenia, wskazówki i krótkie wpisy dotyczące {{ page.title }}.
+        </p>
+    </header>
 
-  {% for group in notes_grouped %}
-    <h2>{{ group.name | capitalize }}</h2>
+    <section>
+      {% assign notes_for_city = site.city_notes | where: "city", page.slug %}
+      {% assign notes_sorted = notes_for_city | sort: "date" | reverse %}
+      {% assign notes_grouped = notes_sorted | group_by: "category" %}
 
-<div class="city-note-grid">
-  {% for note in group.items %}
-    <a href="{{ note.url }}" class="city-note-card {% unless note.cover_image %}no-image{% endunless %}">
-      
-      {% if note.cover_image %}
-      <div class="image-wrapper">
-        <img src="/assets/images/cities/{{ note.city }}/{{ note.cover_image }}" alt="{{ note.title }}">
-      </div>
+      {% if notes_grouped.size > 0 %}
+        {% for group in notes_grouped %}
+          <div class="category-section">
+            <h2 class="category-section__title">{{ group.name | capitalize }}</h2>
+            <div class="city-note-grid">
+              {% for note in group.items %}
+                <a href="{{ note.url | relative_url }}" class="city-note-card {% unless note.cover_image %}no-image{% endunless %}">
+
+                  {% if note.cover_image %}
+                  <div class="city-note-card__image-wrapper">
+                    <img src="/assets/images/cities/{{ note.city }}/{{ note.cover_image }}" alt="{{ note.title }}" class="city-note-card__image">
+                  </div>
+                  {% else %}
+                    <div class="city-note-card__image-wrapper city-note-card__image-wrapper--placeholder"></div>
+                  {% endif %}
+
+                  <div class="city-note-card__content">
+                    <h3 class="city-note-card__title">{{ note.title }}</h3>
+                    {% if note.excerpt %}
+                        <p class="city-note-card__excerpt">{{ note.excerpt | strip_html }}</p>
+                    {% else %}
+                        <p class="city-note-card__excerpt">{{ note.content | strip_html | truncatewords: 30 }}</p>
+                    {% endif %}
+                  </div>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>Brak notatek do wyświetlenia dla tego miasta.</p>
       {% endif %}
-
-      <div class="text-wrapper">
-        <h4>{{ note.title }}</h4>
-        <p>{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
-      </div>
-    </a>
-  {% endfor %}
-</div>
-
-  {% endfor %}
-</section>
-
+    </section>
   </article>
 </main>
