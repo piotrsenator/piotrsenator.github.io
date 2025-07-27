@@ -3,7 +3,7 @@ layout: note
 title: The Rise of Ubiquitous Surveillance
 date: 2025-07-16
 tags: [ai, surveillance]
-slug: last-book
+slug: always-watching
 ---
 Have you heard of WAMI, WAPS, or WAAS? These acronyms refer to persistent surveillance technologies capable of monitoring vast areas in real time. Early programs had technical names like the “Autonomous Real-Time Ground Ubiquitous Surveillance Imaging System” (ARGUS-IS). But over time, they took on more evocative names like “Gorgon Stare.” In Greek mythology, the Gorgons were creatures whose gaze could turn people to stone. The message behind the name is clear: a system that sees everything, all the time.
 
