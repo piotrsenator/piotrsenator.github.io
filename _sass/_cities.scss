@@ -111,27 +111,23 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Bardziej elastyczna siatka */
   gap: var(--spacing-md); /* Użycie zmiennej */
   max-width: 1200px; /* Dodanie max-width dla lepszego centrowania */
-  margin: 0 auto var(--spacing-xl) auto; /* Użycie zmiennych i centrowanie */
+  margin: 0 auto; /* Użycie zmiennych i centrowanie */
   padding: 0 var(--spacing-sm);
   box-sizing: border-box;
 }
 
 .city-note-card {
   /* Dziedziczenie wspólnych stylów z .note-box lub podobnych, jeśli to możliwe */
-  background-color: var(--color-background-accent);
-  border: 1px solid var(--color-secondary);
-  border-radius: var(--border-radius-md); /* Użycie zmiennej */
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: var(--shadow-md); /* Użycie zmiennej */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Użycie zmiennej */
-
   display: flex; /* Zamiast grid, dla ujednolicenia z note-card-horizontal */
   flex-direction: row;
   gap: var(--spacing-md); /* Użycie zmiennej */
-  align-items: center;
+  background-color: var(--color-background-accent);
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--border-radius-md); /* Użycie zmiennej */
   padding: var(--spacing-sm) var(--spacing-md); /* Zgodnie z note-card-horizontal */
+  box-shadow: var(--shadow-md);
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .city-note-card:hover {
@@ -140,7 +136,6 @@
 }
 
 .city-note-card__image-wrapper {
-  /* Nazewnictwo zgodne z .note-card__image-wrapper */
   flex-shrink: 0;
   width: 120px; /* Stała szerokość dla obrazka */
   height: 120px; /* Stała wysokość dla obrazka, aby był kwadratowy */
@@ -148,12 +143,11 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: var(--border-radius-sm); /* Użycie zmiennej */
+  border-radius: 0; 
   background-color: var(--color-secondary); /* Użycie zmiennej */
 }
 
 .city-note-card__image {
-  /* Nazewnictwo zgodne z .note-card__image */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -161,7 +155,6 @@
 }
 
 .city-note-card__text-wrapper {
-  /* Nowa klasa, aby pasowała do konwencji */
   padding: 0; /* Padding już jest na elemencie nadrzędnym .city-note-card */
   display: flex;
   flex-direction: column;
@@ -170,7 +163,6 @@
 }
 
 .city-note-card__title {
-  /* Nazewnictwo zgodne z .note-card__title */
   margin: 0 0 var(--spacing-xs) 0; /* Użycie zmiennej */
   font-size: 1.6rem; /* Dopasowanie do note-entry__title lub note-card__title */
   font-weight: var(--font-weight-bold); /* Użycie zmiennej */
@@ -179,7 +171,6 @@
 }
 
 .city-note-card__description {
-  /* Nazewnictwo zgodne z .note-card__excerpt lub note-entry__excerpt */
   margin: 0;
   font-size: 1rem; /* Dopasowanie do note-card__excerpt */
   color: var(--color-text-secondary); /* Użycie zmiennej */
