@@ -8,7 +8,7 @@ title: Piotr Senator
   <section class="home-about-and-cities">
     <section class="home-about">
       <h2>About Me</h2>
-      <p>I'm an auditor with a passion for understanding the world. This page features my travel anecdotes and lessons from cities I've called home.</p>
+      <p>I am an auditor with a passion for understanding the world. This page features my travel anecdotes and lessons from cities I have called home.</p>
       <p><a class="button subtle" href="/about/">Read more</a></p>
     </section>
 
