@@ -1,1 +1,15 @@
+/* ==========================================================================
+   STRONA POJEDYNCZEJ NOTATKI MIEJSCA (city note page)
+   ========================================================================== */
 
+.city-note-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem; /* Bezpośrednia wartość zamiast zmiennej $gap-large */
+}
+
+.city-note .page-title {
+    font-family: "IBM Plex Sans", sans-serif; /* Bezpośrednia wartość zamiast zmiennej $font-ibm-plex */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
