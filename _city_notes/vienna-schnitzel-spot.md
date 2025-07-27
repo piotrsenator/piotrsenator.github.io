@@ -2,7 +2,7 @@
 title: The Best Schnitzel in Vienna
 date: 2025-07-20
 category: food
-cover_image: vienna_food_02.jpg
+cover_image: schnitzel.jpg
 tags: [food, traditional]
 city: vienna
 ---
