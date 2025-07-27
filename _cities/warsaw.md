@@ -4,7 +4,7 @@ title: Warsaw
 ---
 <header class="city-page__header">
   <p>
-    Tutaj znajdziesz wszystkie moje przemyślenia, wskazówki i krótkie wpisy dotyczące {{ page.title }}.
+Warsaw is the city where I was born, a place with a difficult past but remarkable energy. It is where I went to school and where I keep coming back, always finding something new. It may not be the most obvious tourist destination, but perhaps that is exactly why it surprises people. From modernist housing blocks to lively cafés and green spaces along the Vistula, Warsaw is constantly changing and it never stops intriguing me.
   </p>
 </header>
 
