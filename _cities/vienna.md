@@ -31,7 +31,7 @@ slug: vienna
               {% endif %}
               <div class="city-note-card__content">
                 <h3 class="city-note-card__title">{{ note.title }}</h3>
-                      <p class="city-note-card__excerpt">{{ note.content | markdownify | strip_html | truncatewords: 30, "..." }}</p>
+                      <p class="city-note-card__excerpt">{{ note.content | markdownify | strip_html | truncatewords: 15, "..." }}</p>
               </div>
             </a>
           {% endfor %}
