@@ -12,21 +12,24 @@ title: Vienna
   {% for group in notes_grouped %}
     <h2>{{ group.name | capitalize }}</h2>
 
-    <div class="city-note-grid">
-      {% for note in group.items %}
-        {% if note.cover_image %}
-        <a href="{{ note.url }}" class="city-note-card">
-          <div class="image-wrapper">
-            <img src="/assets/images/{{ note.cover_image }}" alt="{{ note.title }}">
-          </div>
-          <div class="text-wrapper">
-            <h4>{{ note.title }}</h4>
-            <p>{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
-          </div>
-        </a>
-        {% endif %}
-      {% endfor %}
-    </div>
+<div class="city-note-grid">
+  {% for note in group.items %}
+    <a href="{{ note.url }}" class="city-note-card {% unless note.cover_image %}no-image{% endunless %}">
+      
+      {% if note.cover_image %}
+      <div class="image-wrapper">
+        <img src="/assets/images/{{ note.cover_image }}" alt="{{ note.title }}">
+      </div>
+      {% endif %}
+
+      <div class="text-wrapper">
+        <h4>{{ note.title }}</h4>
+        <p>{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+
   {% endfor %}
 </section>
 
