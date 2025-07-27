@@ -4,7 +4,7 @@ title: Luxembourg
 ---
 <header class="city-page__header">
   <p>
-I fell in love with Vienna almost instantly - with its grand architecture, world-class museums, and the unexpected charm of vineyards tucked into hills above the Danube. The city balances elegance with ease: trams glide past baroque façades, locals linger in cafés, and within easy reach are quiet cycling paths and the mountains of Lower Austria. On this page, I’ve gathered a few notes on food, culture, and nearby escapes that made my time here so memorable.
+Luxembourg is the place I now call home. Small in size but rich in contrasts, it’s a cultural crossroads where people from all over the world seem to arrive by chance—and often end up staying. Maybe it’s the sparkling wine, the endless greenery, or simply the quiet harmony of so many nationalities living side by side. There’s more to Luxembourg than finance: it’s a charming corner of Europe, full of hidden places and quiet surprises.
   </p>
 </header>
 
