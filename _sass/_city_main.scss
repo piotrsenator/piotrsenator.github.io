@@ -144,7 +144,12 @@
   .city-note-card__image-wrapper {
     width: 120px; /* Kwadratowy obrazek */
     height: 120px;
-    border-radius: var(--border-radius-sm); /* Mniejsze zaokrąglenie dla kwadratu */
+    /* Zmiana tutaj: zaokrąglamy tylko lewe rogi */
+    border-top-left-radius: var(--border-radius-md);
+    border-bottom-left-radius: var(--border-radius-md);
+    border-top-right-radius: 0; /* Prawy górny róg ostry */
+    border-bottom-right-radius: 0; /* Prawy dolny róg ostry */
+  }
   }
 
   .city-note-card__content {
