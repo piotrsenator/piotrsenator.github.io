@@ -5,7 +5,7 @@ slug: vienna
 ---
 <header class="city-page__header">
   <p>
-    Tutaj znajdziesz wszystkie moje przemyślenia, wskazówki i krótkie wpisy dotyczące {{ page.title }}.
+I fell in love with Vienna almost instantly - with its grand architecture, world-class museums, and the unexpected charm of vineyards tucked into hills above the Danube. The city balances elegance with ease: trams glide past baroque façades, locals linger in cafés, and within easy reach are quiet cycling paths and the mountains of Lower Austria. On this page, I’ve gathered a few notes on food, culture, and nearby escapes that made my time here so memorable.
   </p>
 </header>
 
