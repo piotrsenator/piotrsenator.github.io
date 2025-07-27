@@ -64,7 +64,7 @@
 @media (pointer: fine) and (hover: hover) {
   .city-tiles a.city-note-tile:hover img,
   .city-tiles a.city-note-tile:focus-visible img {
-    filter: brightness(0.5); /* Przyciemnij na hover */
+    filter: brightness(0.4); /* Przyciemnij na hover */
   }
 
   .city-tiles a.city-note-tile:hover span,
@@ -89,7 +89,7 @@
   }
 
   .city-tiles a.city-note-tile img {
-    filter: brightness(0.5); /* Obrazek zawsze przyciemniony */
+    filter: brightness(0.7); /* Obrazek zawsze przyciemniony */
   }
 
   .city-tiles a.city-note-tile span {
@@ -106,7 +106,7 @@
 /* Nadpisze style hover z poprzedniego bloku, jeśli urządzenie jest dotykowe */
 @media (pointer: coarse), (hover: none) {
     .city-tiles a.city-note-tile img {
-        filter: brightness(0.5); /* Obrazek zawsze przyciemniony */
+        filter: brightness(0.7); /* Obrazek zawsze przyciemniony */
     }
 
     .city-tiles a.city-note-tile span {
