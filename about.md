@@ -25,7 +25,7 @@ When I am not immersed in numbers and policies, I absolutely love to walk and cy
 On this page, I will be sharing some of my reflections, special memories from my travels, and a few practical tips from the cities where I have lived. I sincerely hope you find them both interesting and useful.
     </p>
     <p>
-Should you wish to connect, the easiest way to reach me is via LinkedIn.a <a href="https://www.linkedin.com/in/senator" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn</a>.</p>
+Should you wish to connect, the easiest way to reach me is via <a href="https://www.linkedin.com/in/senator" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn</a>.</p>
     </div>
   </div>
 </main>
