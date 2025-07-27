@@ -20,7 +20,6 @@ slug: vienna
         <h2 class="category-section__title">{{ group.name | capitalize }}</h2>
         <div class="city-note-grid">
           {% for note in group.items %}
-          <p>Debug 1</p>
             <a href="{{ note.url | relative_url }}" class="city-note-card {% unless note.cover_image %}no-image{% endunless %}">
 
               {% if note.cover_image %}
@@ -30,18 +29,9 @@ slug: vienna
               {% else %}
                 <div class="city-note-card__image-wrapper city-note-card__image-wrapper--placeholder"></div>
               {% endif %}
-    <p>Debug 2</p>
               <div class="city-note-card__content">
-                  <p>Debug 3</p>
                 <h3 class="city-note-card__title">{{ note.title }}</h3>
-                    <p>Debug 4</p>
-                  {% if note.excerpt %}
-                      <p class="city-note-card__excerpt">{{ note.excerpt | strip_html }}</p>
-                          <p>Debug 5</p>
-                  {% else %}
-                      <p class="city-note-card__excerpt">{{ note.content | markdownify | strip_html | truncatewords: 30, "..." }}</p>    <p>Debug 6</p>
-                  {% endif %}
-                      <p>Debug 7</p>
+                      <p class="city-note-card__excerpt">{{ note.content | markdownify | strip_html | truncatewords: 30, "..." }}</p>
               </div>
             </a>
           {% endfor %}
