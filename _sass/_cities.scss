@@ -12,12 +12,9 @@
 
 .city-tiles a.city-note-tile {
   position: relative;
-  /* Zamiast stałej wysokości, użyj aspect-ratio dla kwadratowych kafelków */
-  aspect-ratio: 1 / 1;
-  /* height: 180px;  <-- Tę linię można usunąć, jeśli używasz aspect-ratio */
   overflow: hidden;
   border: 1px solid #ccc;
-  border-radius: 0px;
+  border-radius: 0;
   text-decoration: none;
   color: inherit;
   background-color: #f9f9f9;
