@@ -2,7 +2,7 @@
 title: Vienna’s Würstelstand Culture
 date: 2025-07-28
 category: food
-main_image: vienna-2025-07-28-wuerstelstand.jpg
+cover_image: vienna-2025-07-28-wuerstelstand.jpg
 tags: [vienna, culture, streetfood, sausages]
 city: vienna
 ---
