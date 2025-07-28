@@ -1,6 +1,13 @@
 /* ==========================================================================
    STRONA POJEDYNCZEJ NOTATKI MIEJSCA (city note page)
    ========================================================================== */
+.city-note-page p {
+    text-indent: 0;
+}
+
+.city-note-page p::first-letter {
+    all: unset; /* usuwa wszelkie dziedziczone style dla pierwszej litery */
+}
 
 .city-note-page {
     max-width: 800px;
