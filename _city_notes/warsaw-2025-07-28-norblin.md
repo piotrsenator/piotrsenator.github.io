@@ -31,22 +31,22 @@ What makes these spaces special is not just their food offerings - it is the atm
 
 ## Addresses
 
-- **Hala Koszyki**  
+**Hala Koszyki**  
   ul. Koszykowa 63, 00-667 Warszawa  
   [https://www.koszyki.com](https://www.koszyki.com)
 
-- **Browary Warszawskie**  
+**Browary Warszawskie**  
   ul. Grzybowska 58, 00-844 Warszawa  
   [https://browarywarszawskie.com.pl](https://browarywarszawskie.com.pl)
 
-- **Fabryka Norblina**  
+**Fabryka Norblina**  
   ul. Żelazna 51/53, 00-841 Warszawa  
   [https://fabrykanorblina.pl](https://fabrykanorblina.pl)
 
-- **Elektrownia Powiśle**  
+**Elektrownia Powiśle**  
   ul. Dobra 42, 00-312 Warszawa  
   [https://elektrowniapowisle.com](https://elektrowniapowisle.com)
 
----
+
 
 If you’re visiting Warsaw and looking for more than just sights—if you want to feel the city’s pulse, eat well, and understand how it honors its past while leaning into the future—skip the guidebooks and spend your evenings here. This is where Warsaw truly lives.
