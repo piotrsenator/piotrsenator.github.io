@@ -1,9 +1,6 @@
 /* ==========================================================================
    STRONA POJEDYNCZEJ NOTATKI MIEJSCA (city note page)
    ========================================================================== */
-.city-note-page .page-content p:first-of-type::first-letter {
-    all: unset !important;
-}
 
 .city-note-page {
     max-width: 800px;
@@ -15,4 +12,15 @@
     font-family: "IBM Plex Sans", sans-serif; /* Bezpośrednia wartość zamiast zmiennej $font-ibm-plex */
     font-weight: 700;
     margin-bottom: 1rem;
+}
+
+/* Usunięcie specjalnego stylu pierwszej litery pierwszego akapitu */
+.city-note-page .page-content p:first-of-type::first-letter {
+    all: unset !important;
+}
+
+/* Wyłączenie wcięć i marginesów po lewej dla wszystkich akapitów w notatce */
+.city-note-page .page-content p {
+    text-indent: 0 !important;
+    margin-left: 0 !important;
 }
