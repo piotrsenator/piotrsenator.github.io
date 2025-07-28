@@ -2,7 +2,7 @@
 title: LUGA 2025 Where Gardens Meet the City
 date: 2025-07-28
 category: events
-main_image: luxembourg-2025-07-28-luga.jpg
+cover_image: luxembourg-2025-07-28-luga.jpg
 tags: [urban-nature, art, sustainable-city, walks]
 city: luxembourg
 ---
@@ -20,5 +20,6 @@ From the Pétrusse valley you can access 900 meter Aquatunnel connecting Pétrus
 To the east, the **Alzette Valley** opens a different chapter—this time with an emphasis on heritage and ecology. Once a center of horticulture and home to the brewing and textile industries, this valley is now a mosaic of riverbanks, gardens, and historical remnants. 
 
 ## Practical Information
+
 **Dates** 7 May – 18 October 2025  
 **Admission** Free (most events)  
