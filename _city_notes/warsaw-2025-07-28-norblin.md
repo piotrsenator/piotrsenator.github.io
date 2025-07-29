@@ -47,6 +47,3 @@ What makes these spaces special is not just their food offerings - it is the atm
   ul. Dobra 42, 00-312 Warszawa  
   [https://elektrowniapowisle.com](https://elektrowniapowisle.com)
 
-
-
-If you’re visiting Warsaw and looking for more than just sights—if you want to feel the city’s pulse, eat well, and understand how it honors its past while leaning into the future—skip the guidebooks and spend your evenings here. This is where Warsaw truly lives.
