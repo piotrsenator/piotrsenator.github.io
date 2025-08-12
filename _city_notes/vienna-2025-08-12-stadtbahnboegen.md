@@ -16,6 +16,7 @@ Among the most notable spots are WerkzeugH, near Thaliastraße, known for its at
 
 If you want to escape the tourist-packed bars of the first district and see a different side of Vienna, head to the Stadtbahnbögen after sunset.
 
-## Addresses- WerkzeugH – Gürtelbogen 1–2, 1080 Vienna
+## Addresses
+- WerkzeugH – Gürtelbogen 1–2, 1080 Vienna
 - Café Carina – Gürtelbogen 10, 1080 Vienna
 - FaniaLive – Gürtelbogen 22–23, 1080 Vienna
