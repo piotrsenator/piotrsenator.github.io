@@ -5,17 +5,17 @@ category: walk
 tags: [vienna, culture, walks]
 city: vienna
 ---
+
 Vienna’s metro may have begun in the 1970s, but its story reaches back to the nineteenth century. At that time, the city introduced the Wiener Stadtbahn, a pioneering steam railway network that connected different parts of Vienna. Designed in part by Otto Wagner, one of the most celebrated architects of the Art Nouveau movement, it featured elegant viaducts, tunnels, and stations that were as much works of art as transport infrastructure.
 
 Electrification began in the 1920s, and half a century later, large sections of the old Stadtbahn were incorporated into the new underground system. The Donaukanal line became today’s U4, while the Gürtel line was transformed into the U6. The U6 remains unique among Vienna’s metro lines. Much of it still runs along the original viaducts built between 1894 and 1898, and several of its historic stations, such as Gumpendorfer Straße, have been preserved. It is also the only line that does not use traditional metro trains but instead runs lighter, tram-style vehicles, a necessity dictated by the technical limits of the nineteenth-century structures.
 
-Beneath the viaduct, in the characteristic brick arches known as the **Stadtbahnbögen**, a different kind of life has flourished in recent decades. Former storage spaces and workshops have been transformed into bars, clubs, and live music venues. Especially in the 7th and 8th districts, the arches come alive after dark, forming a vibrant hub for Vienna’s alternative, rock, and electronic music scenes.
+Beneath the viaduct, in the characteristic brick arches known as the ** Stadtbahnbögen **, a different kind of life has flourished in recent decades. Former storage spaces and workshops have been transformed into bars, clubs, and live music venues. Especially in the 7th and 8th districts, the arches come alive after dark, forming a vibrant hub for Vienna’s alternative, rock, and electronic music scenes.
 
 Among the most notable spots are WerkzeugH, near Thaliastraße, known for its atmospheric interior and popular cocktails; Café Carina, a rock-infused venue where one can enjoy wine or beer in a relaxed garden setting during summer; and FaniaLive, a club hosting live bands and dance nights, including salsa evenings.
 
 If you want to escape the tourist-packed bars of the first district and see a different side of Vienna, head to the Stadtbahnbögen after sunset.
 
-## Addresses
-- WerkzeugH – Gürtelbogen 1–2, 1080 Vienna
+## Addresses- WerkzeugH – Gürtelbogen 1–2, 1080 Vienna
 - Café Carina – Gürtelbogen 10, 1080 Vienna
 - FaniaLive – Gürtelbogen 22–23, 1080 Vienna
