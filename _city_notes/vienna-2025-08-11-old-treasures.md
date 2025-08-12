@@ -28,5 +28,5 @@ Vienna changes, but these places remain holding onto their stories until someone
  - Ruprechtskirche – Ruprechtsplatz 1, 1010 Wien
  - Griechenbeisl – Fleischmarkt 11, 1010 Wien
  - Frick Bookstore – Graben 27, 1010 Wien
-
  - Café Frauenhuber – Himmelpfortgasse 6, 1010 Wien
+
